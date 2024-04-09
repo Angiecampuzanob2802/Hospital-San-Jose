@@ -6,7 +6,9 @@ package autonoma.hospitalsanjose.models;
 
 /**
  *
- * @author dioge
+ * @author Angie Campuzano Betancur & Brayan Estivel Díaz
+ * @version 0.0.1
+ * @since 2024-04-08
  */
 public class Reporte {
     
