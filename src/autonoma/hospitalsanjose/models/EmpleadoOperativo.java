@@ -10,6 +10,22 @@ package autonoma.hospitalsanjose.models;
  * @version 0.0.1
  * @since 2024-04-08
  */
-public class EmpleadoOperativo {
+public class EmpleadoOperativo extends Empleado{
+    
+    private String areaTrabajo;
+    
+    
+    public EmpleadoOperativo(String nombre, String identificacion, int edad, double salarioBase, String areaTrabajo) {
+        super(nombre, identificacion, edad, salarioBase);
+        this.areaTrabajo = areaTrabajo;
+    }
+
+    public String getAreaTrabajo() {
+        return areaTrabajo;
+    }
+
+    public void setAreaTrabajo(String areaTrabajo) {
+        this.areaTrabajo = areaTrabajo;
+    }
     
 }
