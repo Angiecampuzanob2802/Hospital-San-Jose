@@ -4,6 +4,9 @@
  */
 package autonoma.hospitalsanjose.models;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 /**
  *
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
@@ -13,20 +16,46 @@ package autonoma.hospitalsanjose.models;
 public abstract class Medicamento {
     ////////////////////////////////////////////////////////////////////////////
     ///////////atributos
+    private int id;
+    private Date anoActualizacion;
     private String nombre;
     private String descripcion;
-    private String enfermedadAlivia;
+    private double costo;
+    private double precioVenta;
+    private ArrayList<Medicamento>medicamentos;
 
     ////////////////////////////////////////////////////////////////////////////
     //////////////constructores
-    public Medicamento(String nombre, String descripcion, String enfermedadAlivia) {
+
+    public Medicamento(int id, Date anoActualizacion, String nombre, String descripcion, double costo, double precioVenta, ArrayList<Medicamento> medicamentos) {
+        this.id = id;
+        this.anoActualizacion = anoActualizacion;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.enfermedadAlivia = enfermedadAlivia;
+        this.costo = costo;
+        this.precioVenta = precioVenta;
+        this.medicamentos = medicamentos;
     }
 
     ////////////////////////////////////////////////////////////////////////////
     //////////////metodos de acceso
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Date getAnoActualizacion() {
+        return anoActualizacion;
+    }
+
+    public void setAnoActualizacion(Date anoActualizacion) {
+        this.anoActualizacion = anoActualizacion;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -43,13 +72,27 @@ public abstract class Medicamento {
         this.descripcion = descripcion;
     }
 
-    public String getEnfermedadAlivia() {
-        return enfermedadAlivia;
+    public double getCosto() {
+        return costo;
     }
 
-    public void setEnfermedadAlivia(String enfermedadAlivia) {
-        this.enfermedadAlivia = enfermedadAlivia;
+    public void setCosto(double costo) {
+        this.costo = costo;
     }
-    
-    
+
+    public double getPrecioVenta() {
+        return precioVenta;
+    }
+
+    public void setPrecioVenta(double precioVenta) {
+        this.precioVenta = precioVenta;
+    }
+
+    public ArrayList<Medicamento> getMedicamentos() {
+        return medicamentos;
+    }
+
+    public void setMedicamentos(ArrayList<Medicamento> medicamentos) {
+        this.medicamentos = medicamentos;
+    }
 }
