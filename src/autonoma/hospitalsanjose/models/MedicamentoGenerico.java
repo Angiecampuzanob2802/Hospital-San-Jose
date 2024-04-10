@@ -10,6 +10,6 @@ package autonoma.hospitalsanjose.models;
  * @version 0.0.1
  * @since 2024-04-08
  */
-public class Genericos {
+public class MedicamentoGenerico {
     
 }
