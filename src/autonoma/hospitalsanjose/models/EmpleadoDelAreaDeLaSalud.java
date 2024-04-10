@@ -13,9 +13,9 @@ package autonoma.hospitalsanjose.models;
 public class EmpleadoDelAreaDeLaSalud extends Empleado{
     
     private String especialidad;
-    private Double horasTrabajadas;
+    private double horasTrabajadas;
     
-    public EmpleadoDelAreaDeLaSalud(String especialidad, Double horasTrabajadas, String nombre, String identificacion, int edad, double salarioBase) {
+    public EmpleadoDelAreaDeLaSalud(String especialidad, double horasTrabajadas, String nombre, String identificacion, int edad, double salarioBase) {
         super(nombre, identificacion, edad, salarioBase);
         this.especialidad = especialidad;
         this.horasTrabajadas = horasTrabajadas;
