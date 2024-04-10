@@ -65,7 +65,9 @@ public class Cita {
 
     public void registrarEnfermedad(String enfermedad) {
         // Lógica para registrar una enfermedad durante la cita
+        /*
         paciente.agregarEnfermedad(enfermedad);
+        */
         System.out.println("La enfermedad " + enfermedad + " ha sido registrada para el paciente " + paciente.getNombre() + ".");
     }
 
