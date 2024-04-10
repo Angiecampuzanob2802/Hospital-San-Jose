@@ -11,8 +11,8 @@ package autonoma.hospitalsanjose.models;
  * @since 2024-04-08
  */
 public class MedicamentoGenerico extends Medicamento {
-    public MedicamentoGenerico(String nombre,String descripcion,double costo){
-        super(nombre, descripcion,costo);
+    public MedicamentoGenerico(String nombre,String descripcion,double costo,double precioVenta){
+        super(nombre, descripcion,costo,precioVenta);
         this.precioVenta = costo * 1.10;
     }       
 }

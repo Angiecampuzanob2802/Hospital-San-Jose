@@ -16,8 +16,8 @@ public class MedicamentoComercial extends Medicamento{
     private String fabricante;
     
     //////constructor
-    public MedicamentoComercial(String nombre,String descripcion,double cosot,String fabricante) {
-        super(nombre,descripcion,costo);
+    public MedicamentoComercial(String nombre,String descripcion,double costo,double precioVenta,String fabricante) {
+        super(nombre,descripcion,costo,precioVenta);
         this.fabricante = fabricante;
         this.precioVenta=costo * 1.25;
     }

@@ -11,7 +11,6 @@ package autonoma.hospitalsanjose.models;
  * @since 2024-04-08
  */
 public abstract class Empleado {
-    
     private String nombre;
     private String identificacion;
     private int edad;
