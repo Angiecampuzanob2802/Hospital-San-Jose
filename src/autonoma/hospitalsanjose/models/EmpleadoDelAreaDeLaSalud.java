@@ -15,7 +15,6 @@ public class EmpleadoDelAreaDeLaSalud extends Empleado{
     private String especialidad;
     private double horasTrabajadas;
     
-
     //// constructor
     public EmpleadoDelAreaDeLaSalud(String especialidad, double horasTrabajadas, String nombre, String identificacion, int edad, double salarioBase) {
         super(nombre, identificacion, edad, salarioBase);
@@ -26,18 +25,19 @@ public class EmpleadoDelAreaDeLaSalud extends Empleado{
     public String getEspecialidad() {
         return especialidad;
     }
-
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
-
     public Double getHorasTrabajadas() {
         return horasTrabajadas;
     }
-
     public void setHorasTrabajadas(Double horasTrabajadas) {
         this.horasTrabajadas = horasTrabajadas;
     }
     ////// metodos 
+    /*
+    empleado salud
+    calcularSalario:1.2% y se multiplica por el numero de horas trabajadas y luego sumarlos
+    */
 
 }

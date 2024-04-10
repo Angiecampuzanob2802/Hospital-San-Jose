@@ -90,12 +90,12 @@ public class Paciente {
     public void setListaEnfermedades(ArrayList<Enfermedad> listaEnfermedades) {
         this.listaEnfermedades = listaEnfermedades;
     }
+    ///// metodos 
     public void agregarEnfermedad(String nombre, String descripcion) {
         Enfermedad enfermedad = new Enfermedad(nombre, descripcion);
         listaEnfermedades.add(enfermedad);
         saludable = false; // El paciente deja de estar saludable al agregar una enfermedad
     }
-
     public void curarEnfermedad(String nombreEnfermedad) {
         for (Enfermedad enfermedad : listaEnfermedades) {
             if (enfermedad.getNombre().equals(nombreEnfermedad)) {

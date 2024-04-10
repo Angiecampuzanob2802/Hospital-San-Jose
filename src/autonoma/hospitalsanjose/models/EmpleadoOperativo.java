@@ -28,5 +28,8 @@ public class EmpleadoOperativo extends Empleado{
         this.areaTrabajo = areaTrabajo;
     }
     ////// metodos
-    
+    /*
+    empleadoOperativo
+    calcularSalario: se le suma el 20% para obtener el salario neto a retomar
+    */
 }

@@ -19,16 +19,14 @@ public class Gerente {
    private int edad;
    private String carrera;
    
-   ///////// Constructor///////
-
+  ///////// Constructor///////
     public Gerente (String nombre, String numeroIdentificacion, int edad, String carrera){
         this.nombre = nombre;
         this.numeroIdentificacion = numeroIdentificacion;
         this.edad = edad;
         this.carrera = carrera;
     }
-    //////////////Metodos De Acceso//////////
-
+    ///////Metodos De Acceso//////
     public String getNombre() {
         return nombre;
     }

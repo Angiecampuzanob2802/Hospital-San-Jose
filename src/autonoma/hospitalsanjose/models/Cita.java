@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package autonoma.hospitalsanjose.models;
-
 import java.util.Date;
 
 /**
@@ -58,6 +57,7 @@ public class Cita {
     public void setValorCita(double valorCita) {
         this.valorCita = valorCita;
     }
+    ///// metodos
     public void atenderPaciente() {
         // Lógica para atender al paciente durante la cita
         System.out.println("La cita para el paciente " + paciente.getNombre() + " ha sido atendida por el médico " + medico + ".");

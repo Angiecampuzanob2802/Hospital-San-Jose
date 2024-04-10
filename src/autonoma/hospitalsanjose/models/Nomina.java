@@ -12,7 +12,6 @@ import java.util.Date;
  *@versión 0.0.1
  *@since 2024-04-08
  */
-
 public class Nomina {
     ////atributos////
     private double salarioTotal;

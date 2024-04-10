@@ -7,17 +7,17 @@ package autonoma.hospitalsanjose.models;
 /**
  *
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
- * @version 0.0.1
+ * @version 0.1.6
  * @since 2024-04-08
  * 
  */
 public class MedicamentoComercial extends Medicamento{
-    ///// atributos////
+    ///// atributo////
     private String fabricante;
     
     //////constructor
-    public MedicamentoComercial(String nombre,String descripcion,double costo,double precioVenta,String fabricante) {
-        super(nombre,descripcion,costo,precioVenta);
+    public MedicamentoComercial(long id,String nombre,String descripcion,double costo,double precioVenta,String fabricante) {
+        super(id,nombre,descripcion,costo,precioVenta);
         this.fabricante = fabricante;
         this.precioVenta=costo * 1.25;
     }

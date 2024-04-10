@@ -156,5 +156,8 @@ public class Hospital {
             estado = true; // Cambiar a estado activo
         }
     }
+    /*
+    gestionar ventaMedicamento desde el hospital
+    */
 
 }

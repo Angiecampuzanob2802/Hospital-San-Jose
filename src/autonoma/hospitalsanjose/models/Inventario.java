@@ -9,31 +9,25 @@ import java.util.Date;
 
 /**
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
- * @version 0.0.1
+ * @version 0.1.6
  * @since 2024-04-09
  */
 public class Inventario {
-    
-    ////////////////////////////////////////////////////////////////////////////
     //////////////atributos
     private int id;
     private Date anoActualizacion;
     private ArrayList<Medicamento> medicamentos;
     
-    ////////////////////////////////////////////////////////////////////////////
-    //////////////constructores
+    //////////////constructor
     public Inventario(int id, Date anoActualizacion, ArrayList<Medicamento> medicamentos) {
         this.id = id;
         this.anoActualizacion = anoActualizacion;
         this.medicamentos = new ArrayList<>();
     }
-    
-    ////////////////////////////////////////////////////////////////////////////
     ////////////////metodos de acceso
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
@@ -53,9 +47,6 @@ public class Inventario {
     public void setMedicamentos(ArrayList<Medicamento> medicamentos) {
         this.medicamentos = medicamentos;
     }
-    
-    
-    ////////////////////////////////////////////////////////////////////////////
     // Metodos de gestión de productos o CRUD de productos
     
     //////////////metodo para agregar medicamento
@@ -75,7 +66,6 @@ public class Inventario {
         }
         return null;   
     }
-    
     /////////////////metodo para buscar producto por ID
     public Medicamento buscarMedicamento(long id){
         
@@ -87,7 +77,6 @@ public class Inventario {
         }
         return null;   
     }
-    
     ///////////////////metodo para buscar por nombre
     public Medicamento buscarMedicamento(String nombre){
         
@@ -99,7 +88,6 @@ public class Inventario {
         }
         return null;   
     }
-    
     //////////////////////metodo para buscar por indice
     private int buscarIndiceMedicamento(long id){
         for(int i=0;i<this.medicamentos.size();i++){
@@ -110,7 +98,6 @@ public class Inventario {
         }
         return -1;  
     }
-    
     //////////////////////metodo para actualizar medicamentos
     public Medicamento actualizarMedicamento(long id, Medicamento medicamento)
     {
@@ -121,7 +108,6 @@ public class Inventario {
             return null;
         }
     }
-    
     ///////////////////////metodo para eliminar medicamentos
     public Medicamento eliminarMedicamento(long id){
         
@@ -132,7 +118,6 @@ public class Inventario {
             return null;
         }
     }
-    
     //////////////////////////metodo para mostrar inventario
     public String mostrarInventario(){
         String inventario = "";

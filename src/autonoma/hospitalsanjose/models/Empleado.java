@@ -11,18 +11,21 @@ package autonoma.hospitalsanjose.models;
  * @since 2024-04-08
  */
 public abstract class Empleado {
+    
+    //// atributos
     private String nombre;
     private String identificacion;
     private int edad;
     private double salarioBase;
 
+    //// constructor
     public Empleado(String nombre, String identificacion, int edad, double salarioBase) {
         this.nombre = nombre;
         this.identificacion = identificacion;
         this.edad = edad;
         this.salarioBase = salarioBase;
     }
-
+    //// metodos de acceso
     public String getNombre() {
         return nombre;
     }

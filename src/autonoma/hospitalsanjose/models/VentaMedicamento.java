@@ -5,14 +5,10 @@
 package autonoma.hospitalsanjose.models;
 
 /**
- *
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
- * @version 0.1.6
+ * @versión 0.0.1
  * @since 2024-04-08
  */
-public class MedicamentoGenerico extends Medicamento {
-    public MedicamentoGenerico(long id,String nombre,String descripcion,double costo,double precioVenta){
-        super(id,nombre, descripcion,costo,precioVenta);
-        this.precioVenta = costo * 1.10;
-    }       
+public class VentaMedicamento {
+    
 }

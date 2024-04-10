@@ -17,13 +17,11 @@ public class Enfermedad {
     private String descripcion;
     
     ///// constructor
-    
     public Enfermedad(String nombre, String descripcion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
     //// metodos de acceso
-    
     public String getNombre() {
         return nombre;
     }
