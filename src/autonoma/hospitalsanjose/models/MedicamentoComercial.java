@@ -11,6 +11,6 @@ package autonoma.hospitalsanjose.models;
  * @since 2024-04-08
  * 
  */
-public class Comerciales {
+public class MedicamentoComercial {
     
 }
