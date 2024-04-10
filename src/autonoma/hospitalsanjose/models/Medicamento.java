@@ -4,9 +4,6 @@
  */
 package autonoma.hospitalsanjose.models;
 
-import java.util.ArrayList;
-import java.util.Date;
-
 /**
  *
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
@@ -14,6 +11,8 @@ import java.util.Date;
  * @since 2024-04-08
  */
 public abstract class Medicamento {
+    
+    
     ///////////atributos
     private String nombre;
     private String descripcion;
@@ -28,28 +27,37 @@ public abstract class Medicamento {
         this.precioVenta = precioVenta;
     }
     //////////////metodos de acceso
+
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     public String getDescripcion() {
         return descripcion;
     }
+
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
     public double getCosto() {
         return costo;
     }
+
     public void setCosto(double costo) {
         this.costo = costo;
     }
+
     public double getPrecioVenta() {
         return precioVenta;
     }
+
     public void setPrecioVenta(double precioVenta) {
         this.precioVenta = precioVenta;
-    } 
+    }
+    
 }
