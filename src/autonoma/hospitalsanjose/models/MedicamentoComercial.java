@@ -11,6 +11,23 @@ package autonoma.hospitalsanjose.models;
  * @since 2024-04-08
  * 
  */
-public class MedicamentoComercial {
+public class MedicamentoComercial extends Medicamento{
+    ///// atributos////
+    private String fabricante;
     
+    //////constructor
+    public MedicamentoComercial(String nombre,String descripcion,double cosot,String fabricante) {
+        super(nombre,descripcion,costo);
+        this.fabricante = fabricante;
+        this.precioVenta=costo * 1.25;
+    }
+    /////metodos de acceso
+
+    public String getFabricante() {
+        return fabricante;
+    }
+
+    public void setFabricante(String fabricante) {
+        this.fabricante = fabricante;
+    }   
 }
