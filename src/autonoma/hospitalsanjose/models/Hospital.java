@@ -5,6 +5,7 @@
 package autonoma.hospitalsanjose.models;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -18,29 +19,25 @@ public class Hospital {
     private String nombre;
     private String direccion;
     private String telefono;
-    private String logo;
     private double presupuesto;
-    private int fechaFundacion;
+    private Date fechaFundacion;
     private boolean estado;
     private Coordenada localizacion;
-    private Gerente gerente;
     private ArrayList<Nomina>nominasRealizadas;
-    private double metaVentasAnual;
+    private double metaVentaAnual;
     
     /////constructor////
 
-    public Hospital(String nombre, String direccion, String telefono, String logo, double presupuesto, int fechaFundacion, boolean estado, Coordenada localizacion, Gerente gerente, ArrayList<Nomina> nominasRealizadas, double metaVentasAnual) {
+    public Hospital(String nombre, String direccion, String telefono, double presupuesto, Date fechaFundacion, boolean estado, Coordenada localizacion,ArrayList<Nomina> nominasRealizadas, double metaVentaAnual) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
-        this.logo = logo;
         this.presupuesto = presupuesto;
         this.fechaFundacion = fechaFundacion;
         this.estado = estado;
         this.localizacion = localizacion;
-        this.gerente = gerente;
         this.nominasRealizadas = nominasRealizadas;
-        this.metaVentasAnual = metaVentasAnual;
+        this.metaVentaAnual = metaVentaAnual;
     }
     ///// metodos de acceso////
 
@@ -67,15 +64,6 @@ public class Hospital {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-
-    public String getLogo() {
-        return logo;
-    }
-
-    public void setLogo(String logo) {
-        this.logo = logo;
-    }
-
     public double getPresupuesto() {
         return presupuesto;
     }
@@ -84,11 +72,11 @@ public class Hospital {
         this.presupuesto = presupuesto;
     }
 
-    public int getFechaFundacion() {
+    public Date getFechaFundacion() {
         return fechaFundacion;
     }
 
-    public void setFechaFundacion(int fechaFundacion) {
+    public void setFechaFundacion(Date fechaFundacion) {
         this.fechaFundacion = fechaFundacion;
     }
 
@@ -107,15 +95,6 @@ public class Hospital {
     public void setLocalizacion(Coordenada localizacion) {
         this.localizacion = localizacion;
     }
-
-    public Gerente getGerente() {
-        return gerente;
-    }
-
-    public void setGerente(Gerente gerente) {
-        this.gerente = gerente;
-    }
-
     public ArrayList<Nomina> getNominasRealizadas() {
         return nominasRealizadas;
     }
@@ -125,11 +104,11 @@ public class Hospital {
     }
 
     public double getMetaVentasAnual() {
-        return metaVentasAnual;
+        return metaVentaAnual;
     }
 
     public void setMetaVentasAnual(double metaVentasAnual) {
-        this.metaVentasAnual = metaVentasAnual;
+        this.metaVentaAnual = metaVentasAnual;
     }
     
     //// metodos////

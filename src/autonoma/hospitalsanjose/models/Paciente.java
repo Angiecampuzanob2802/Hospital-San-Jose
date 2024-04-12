@@ -1,9 +1,8 @@
-/*
+        /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package autonoma.hospitalsanjose.models;
-
 import java.util.ArrayList;
 
 /**
@@ -91,11 +90,13 @@ public class Paciente {
         this.listaEnfermedades = listaEnfermedades;
     }
     ///// metodos 
+    
     public void agregarEnfermedad(String nombre, String descripcion) {
-        Enfermedad enfermedad = new Enfermedad(nombre, descripcion);
+        Enfermedad enfermedad= new Enfermedad(nombre, descripcion);
         listaEnfermedades.add(enfermedad);
         saludable = false; // El paciente deja de estar saludable al agregar una enfermedad
     }
+
     public void curarEnfermedad(String nombreEnfermedad) {
         for (Enfermedad enfermedad : listaEnfermedades) {
             if (enfermedad.getNombre().equals(nombreEnfermedad)) {

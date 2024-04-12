@@ -12,13 +12,15 @@ package autonoma.hospitalsanjose.models;
  */
 public abstract class Medicamento {
     private static int contadorMedicamento=1;
-    
     ///////////atributos
     private long id;
     private String nombre;
     private String descripcion;
     private double costo;
     public double precioVenta;
+    /**
+     * ArrayList<Medicamento>medicamnetos   
+     */
 
     //////////////constructor sin parametros
     public Medicamento(){

@@ -5,8 +5,6 @@
 package autonoma.hospitalsanjose.models;
 
 import java.util.ArrayList;
-import java.util.Date;
-
 /**
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
  * @version 0.1.6
@@ -15,11 +13,11 @@ import java.util.Date;
 public class Inventario {
     //////////////atributos
     private int id;
-    private Date anoActualizacion;
+    private int anoActualizacion;
     private ArrayList<Medicamento> medicamentos;
     
     //////////////constructor
-    public Inventario(int id, Date anoActualizacion, ArrayList<Medicamento> medicamentos) {
+    public Inventario(int id, int anoActualizacion, ArrayList<Medicamento> medicamentos) {
         this.id = id;
         this.anoActualizacion = anoActualizacion;
         this.medicamentos = new ArrayList<>();
@@ -32,11 +30,11 @@ public class Inventario {
         this.id = id;
     }
 
-    public Date getAnoActualizacion() {
+    public int getAnoActualizacion() {
         return anoActualizacion;
     }
 
-    public void setAnoActualizacion(Date anoActualizacion) {
+    public void setAnoActualizacion(int anoActualizacion) {
         this.anoActualizacion = anoActualizacion;
     }
 
@@ -110,7 +108,6 @@ public class Inventario {
     }
     ///////////////////////metodo para eliminar medicamentos
     public Medicamento eliminarMedicamento(long id){
-        
         int index = this.buscarIndiceMedicamento(id);
         if(index>=0){
             return this.medicamentos.remove(index);

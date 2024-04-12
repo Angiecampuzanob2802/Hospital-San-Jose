@@ -5,20 +5,40 @@
 package autonoma.hospitalsanjose.models;
 
 /**
- *
+ * 
+ * La clase abstracta Empleado representa a un empleado en el sistema del hospital.
+ * Esta clase define los atributos comunes y métodos de acceso para todos los tipos de empleados.
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
- * @version 0.0.1
+ * @version 0.1.6
  * @since 2024-04-08
  */
 public abstract class Empleado {
-    
     //// atributos
+    /**
+     * El nombre del empleado
+     */
     private String nombre;
+    /**
+     * La identificación del empleado
+     */
     private String identificacion;
+    /**
+     * La edad del empleado
+     */
     private int edad;
+    /**
+     * El salario base del empleado
+     */
     private double salarioBase;
 
-    //// constructor
+    //// constructor con parametros 
+    /**
+     * Constructor de la clase Emleado
+     * @param nombre El nombre del empleado
+     * @param identificacion La identificación del empleado
+     * @param edad La edad del empleado
+     * @param salarioBase El salario base del empleado
+     */
     public Empleado(String nombre, String identificacion, int edad, double salarioBase) {
         this.nombre = nombre;
         this.identificacion = identificacion;
@@ -57,5 +77,12 @@ public abstract class Empleado {
     public void setSalarioBase(double salarioBase) {
         this.salarioBase = salarioBase;
     }
-    
+    //////// Metodos abstractos
+    /**
+     * Calcula el salario del empleado
+     * @return El salario del empleado 
+     */
+    /**
+    public abstract double calcularSalario();
+    */
 }
