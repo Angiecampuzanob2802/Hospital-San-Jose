@@ -17,7 +17,6 @@ interfaz gráfica. Como datos iniciales considere los siguientes los cuales debe
 ser tomados desde un archivo de texto plano (este se debe modificar si es que se
 edita la información desde la interfaz gráfica):
 Hospital
-
 Nombre Hospital San Jose St. Bonaventure
 Dirección 2425 Samaritan Dr, San Jose, CA 95124,Estados Unidos
 Teléfono +1 408-559-2011
