@@ -3,30 +3,71 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package autonoma.hospitalsanjose.models;
-
 import java.util.ArrayList;
 import java.util.Date;
 
 /**
  *
+ * La clase Hospital representa un hospital con su nombre, dirección, teléfono,
+ * presupuesto, fecha de fundación, estado, localización, nóminas realizadas y
+ * meta de venta anual.
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
- * @version 0.0.1
+ * @version 0.1.6
  * @since 2024-04-08
  * 
  */
 public class Hospital {
     /// atributos///
+    /**
+     * El nombre del Hospital
+     */
     private String nombre;
+    /**
+     * La direccion del Hospital
+     */
     private String direccion;
+    /**
+     * El telefono del Hospital
+     */
     private String telefono;
+    /**
+     * El presupuesto del Hospital
+     */
     private double presupuesto;
+    /**
+     * La Fecha de fundación del Hospital
+     */
     private Date fechaFundacion;
+    /**
+     * El estado del Hospital
+     */
     private boolean estado;
+    /**
+     * La localización del Hospital
+     */
     private Coordenada localizacion;
+    /**
+     * Las nominas realizadas por el Hospital
+     */
     private ArrayList<Nomina>nominasRealizadas;
+    /**
+     * La meta de venta anual del Hospital
+     */
     private double metaVentaAnual;
     
-    /////constructor////
+    /////constructor con parametros /////
+    /**
+     * El constructor de la clase Hospital
+     * @param nombre El nombre del hospital.
+     * @param direccion La dirección del hospital.
+     * @param telefono El teléfono del hospital.
+     * @param presupuesto El presupuesto del hospital.
+     * @param fechaFundacion La fecha de fundación del hospital.
+     * @param estado El estado del hospital.
+     * @param localizacion La localización del hospital.
+     * @param nominasRealizadas Las nóminas realizadas por el hospital.
+     * @param metaVentaAnual La meta de venta anual del hospital.
+     */
 
     public Hospital(String nombre, String direccion, String telefono, double presupuesto, Date fechaFundacion, boolean estado, Coordenada localizacion,ArrayList<Nomina> nominasRealizadas, double metaVentaAnual) {
         this.nombre = nombre;
@@ -112,6 +153,10 @@ public class Hospital {
     }
     
     //// metodos////
+    /**
+     * Realiza una nómina para el hospital, actualizando el presupuesto y el estado del hospital.
+     * @param nomina La nómina a realizar.
+     */
     public void realizarNomina(Nomina nomina) {
         nominasRealizadas.add(nomina);
         // Actualizar presupuesto y estado del hospital
@@ -121,6 +166,10 @@ public class Hospital {
             estado = false; // Cambiar a estado de quiebra
         }
     }
+    /**
+     * Calcula el total de la nómina realizada por el hospital.
+     * @return El total de la nómina.
+     */
     private double calcularTotalNomina() {
         double total = 0;
         for (Nomina nomina : nominasRealizadas) {
@@ -128,7 +177,10 @@ public class Hospital {
         }
         return total;
     }
-
+    /**
+     * Registra un patrocinio para el hospital, actualizando el presupuesto y el estado del hospital.
+     * @param monto El monto del patrocinio a registrar.
+     */
     public void registrarPatrocinio(double monto) {
         presupuesto += monto;
         if (presupuesto >= 0) {

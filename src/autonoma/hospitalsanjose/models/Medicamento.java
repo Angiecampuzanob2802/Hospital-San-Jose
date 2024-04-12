@@ -5,24 +5,47 @@
 package autonoma.hospitalsanjose.models;
 
 /**
- *
+ * 
+ *La clase abstracta Medicamento representa un medicamento con su identificador, nombre,descripción, costo y precio de venta.
+ * Esta clase es abstracta y proporciona una base para la creación de diferentes tipos de medicamentos.
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
  * @version 0.1.6
  * @since 2024-04-08
  */
 public abstract class Medicamento {
+    /**
+     * El contador de Medicamentos
+     */
     private static int contadorMedicamento=1;
     ///////////atributos
+    /**
+     * El identificador del medicamento
+     */
     private long id;
+    /**
+     * El nombre del medicamento
+     */
     private String nombre;
+    /**
+     * La descripcion del medicamento
+     */
     private String descripcion;
+    /**
+     * El costo del medicamento
+     */
     private double costo;
+    /**
+     * El precio de venta del medicamento
+     */
     public double precioVenta;
     /**
      * ArrayList<Medicamento>medicamnetos   
      */
 
     //////////////constructor sin parametros
+    /**
+     * Constructor de la clase Medicamentos sin parametros
+     */
     public Medicamento(){
         this.id=Medicamento.contadorMedicamento;
         this.nombre=" ";
@@ -32,6 +55,14 @@ public abstract class Medicamento {
         contadorMedicamento ++;
     }
     /////////// constructor con parametros
+    /**
+     * Constructor de la clase Medicamentos
+     * @param id El identificador del medicamento.
+     * @param nombre El nombre del medicamento.
+     * @param descripcion La descripción del medicamento.
+     * @param costo El costo del medicamento.
+     * @param precioVenta El precio de venta del medicamento.
+     */
     public Medicamento(long id, String nombre, String descripcion, double costo, double precioVenta) {
         this.id = id;
         this.nombre = nombre;
@@ -78,6 +109,10 @@ public abstract class Medicamento {
         this.precioVenta = precioVenta;
     }
     //// metodo
+    /**
+     * Devuelve una representación en cadena del objeto de Medicamento
+     * @return Una cadena que representa el objeto Medicamento.
+     */
     @Override
      public String toString(){
        return  " Medicamento:" +id+ "\n"+

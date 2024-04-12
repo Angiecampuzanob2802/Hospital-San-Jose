@@ -5,21 +5,39 @@
 package autonoma.hospitalsanjose.models;
 
 /**
- *
+ * La clase Gerente representa a un gerente del hospital, con su nombre, número de identificación,edad y carrera.
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
- * @version 0.0.1
+ * @version 0.1.6
  * @since 2024-04-08
  * 
  */
 public class Gerente {
-    
   ////////////Atributos///////
+    /**
+     * El nombre del gerente
+     */
    private String nombre;
+   /**
+    * El numero de identificacion del gerente 
+    */
    private String numeroIdentificacion;
+   /**
+    * La edad del gerente
+    */
    private int edad;
+   /**
+    * La carrera del gerente
+    */
    private String carrera;
    
-  ///////// Constructor///////
+  ///////// Constructor con parametros ///////
+   /**
+    * Crea una nueva instancia de la clase Gerente
+    * @param nombre El nombre del gerente 
+    * @param numeroIdentificacion El numero de Identificacion del gerente 
+    * @param edad La edad del gerente 
+    * @param carrera La carrea del gerente
+    */
     public Gerente (String nombre, String numeroIdentificacion, int edad, String carrera){
         this.nombre = nombre;
         this.numeroIdentificacion = numeroIdentificacion;
