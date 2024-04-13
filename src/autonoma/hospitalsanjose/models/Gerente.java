@@ -29,7 +29,7 @@ public class Gerente {
     * La carrera del gerente
     */
    private String carrera;
-   
+ 
   ///////// Constructor con parametros ///////
    /**
     * Crea una nueva instancia de la clase Gerente

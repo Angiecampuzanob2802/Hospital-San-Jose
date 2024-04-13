@@ -54,6 +54,7 @@ public class Hospital {
      * La meta de venta anual del Hospital
      */
     private double metaVentaAnual;
+    private Gerente gerente;
     
     /////constructor con parametros /////
     /**
@@ -67,9 +68,11 @@ public class Hospital {
      * @param localizacion La localización del hospital.
      * @param nominasRealizadas Las nóminas realizadas por el hospital.
      * @param metaVentaAnual La meta de venta anual del hospital.
+     * @param gerente El gerente del Hospital
+     * 
      */
 
-    public Hospital(String nombre, String direccion, String telefono, double presupuesto, Date fechaFundacion, boolean estado, Coordenada localizacion,ArrayList<Nomina> nominasRealizadas, double metaVentaAnual) {
+    public Hospital(String nombre, String direccion, String telefono, double presupuesto, Date fechaFundacion, boolean estado, Coordenada localizacion,ArrayList<Nomina> nominasRealizadas, double metaVentaAnual,Gerente gerente) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
@@ -79,6 +82,7 @@ public class Hospital {
         this.localizacion = localizacion;
         this.nominasRealizadas = nominasRealizadas;
         this.metaVentaAnual = metaVentaAnual;
+        this.gerente=gerente;
     }
     ///// metodos de acceso////
 
@@ -151,6 +155,15 @@ public class Hospital {
     public void setMetaVentasAnual(double metaVentasAnual) {
         this.metaVentaAnual = metaVentasAnual;
     }
+
+    public Gerente getGerente() {
+        return gerente;
+    }
+
+    public void setGerente(Gerente gerente) {
+        this.gerente = gerente;
+    }
+    
     
     //// metodos////
     /**
