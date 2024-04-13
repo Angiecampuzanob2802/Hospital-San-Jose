@@ -3,23 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Paciente.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/EmpleadoOperativo.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Empleado.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/main/Main.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Reporte.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Inventario.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/VentaMedicamento.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Gerente.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Coordenada.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Nomina.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/MedicamentoGenerico.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Medicamento.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Enfermedad.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/MedicamentoComercial.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/EmpleadoDelAreaDeLaSalud.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Hospital.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Cita.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/Empleado.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/Hospital.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/Gerente.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/Cita.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/Medicamento.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/EmpleadoOperativo.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/Reporte.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/EmpleadoDelAreaDeLaSalud.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/VentaMedicamento.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/Enfermedad.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/MedicamentoGenerico.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/MedicamentoComercial.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/Nomina.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/Coordenada.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/Paciente.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/Inventario.java</file>
         </group>
     </open-files>
 </project-private>
