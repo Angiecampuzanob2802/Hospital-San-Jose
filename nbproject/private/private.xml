@@ -3,12 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/archivos/Inventario.txt</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Paciente.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/EmpleadoOperativo.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Empleado.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/main/Main.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/archivos/Medicamentos.txt</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma.hospitalsanjose.images/favicon.png</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Reporte.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Inventario.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Coordenada.java</file>
@@ -22,6 +23,8 @@
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/views/ModuloEmpleados.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/EmpleadoDelAreaDeLaSalud.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Cita.java</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma.hospitalsanjose.images/logo.png</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma.hospitalsanjose.images/city.png</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/archivos/Enfermedades.txt</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/archivos/Info.txt</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/views/ModuloPacientes.java</file>
@@ -30,12 +33,6 @@
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/views/ModuloReportes.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Hospital.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/views/InicioHospital.java</file>
-=======
-            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/views/ModuloEmpleados.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/models/Hospital.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/main/Main.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/Proyectos2024/POO/POO2024/Hospital-San-Jose/src/autonoma/hospitalsanjose/views/InicioHospital.java</file>
->>>>>>> dd7e98db8be94e05443c64b5986d83003082ab2f
         </group>
     </open-files>
 </project-private>

@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package autonoma.hospitalsanjose.views;
-
 import autonoma.hospitalsanjose.models.Hospital;
 import java.awt.Color;
 import java.awt.Image;
