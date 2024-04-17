@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package autonoma.hospitalsanjose.views;
-
 import autonoma.hospitalsanjose.models.Hospital;
 import java.awt.Color;
 import java.awt.Image;
@@ -12,7 +11,9 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author dioge
+ * @author Angie Campuzano Betancur & Brayan Estivel Díaz
+ * @versión 0.1.6
+ * @since 2024-04-08
  */
 public class InicioHospital extends javax.swing.JFrame {
 
@@ -32,7 +33,6 @@ public class InicioHospital extends javax.swing.JFrame {
         this.hospital = hospital;
         this.ventanaPrincipal = ventana;
     }
-
 
     /**
      * This method is called from within the constructor to initialize the form.

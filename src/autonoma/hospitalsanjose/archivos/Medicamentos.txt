@@ -7,4 +7,5 @@ Nitrofurazona
 Alopurinol
 Azatioprina
 Bilastina
+Timolol
 
