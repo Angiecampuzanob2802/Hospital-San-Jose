@@ -5,8 +5,9 @@
 package autonoma.hospitalsanjose.views;
 
 /**
- *
- * @author dioge
+ * @author Angie Campuzano Betancur & Brayan Estivel Díaz
+ * @versión 0.1.6
+ * @since 2024-04-08
  */
 public class ModuloPacientes extends javax.swing.JDialog {
 

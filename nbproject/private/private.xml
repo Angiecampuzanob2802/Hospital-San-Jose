@@ -6,24 +6,29 @@
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Paciente.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/EmpleadoOperativo.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Empleado.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/archivos/Enfermedades.txt</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/main/Main.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/archivos/Medicamentos.txt</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Reporte.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/archivos/Info.txt</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Inventario.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Gerente.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Coordenada.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/archivos/Empleados.txt</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Nomina.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/MedicamentoGenerico.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/archivos/Pacientes.txt</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/views/ModuloFarmacia.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Medicamento.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Enfermedad.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/MedicamentoComercial.java</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/views/ModuloEmpleados.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/EmpleadoDelAreaDeLaSalud.java</file>
-            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Hospital.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Cita.java</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/archivos/Enfermedades.txt</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/archivos/Info.txt</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/views/ModuloPacientes.java</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Gerente.java</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Nomina.java</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/views/ModuloReportes.java</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Hospital.java</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/views/InicioHospital.java</file>
         </group>
     </open-files>
 </project-private>
