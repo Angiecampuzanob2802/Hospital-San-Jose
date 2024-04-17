@@ -56,6 +56,7 @@ public class Hospital {
     private double metaVentaAnual;
     private Gerente gerente;
     
+    private Administrador administrador;
     /////constructor con parametros /////
     /**
      * El constructor de la clase Hospital
@@ -163,7 +164,14 @@ public class Hospital {
     public void setGerente(Gerente gerente) {
         this.gerente = gerente;
     }
-    
+
+    public Administrador getAdministrador() {
+        return administrador;
+    }
+
+    public void setAdministrador(Administrador administrador) {
+        this.administrador = administrador;
+    }
     
     //// metodos////
     /**
