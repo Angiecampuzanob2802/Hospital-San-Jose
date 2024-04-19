@@ -3,14 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package autonoma.hospitalsanjose.views;
-
 import autonoma.hospitalsanjose.models.Hospital;
 import java.awt.Color;
 
 
 /**
- *
- * @author Usuario
+ * @author Angie Campuzano Betancur & Brayan Estivel Díaz
+ * @versión 1.0.0
+ * @since 2024-04-08
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
     
@@ -25,7 +25,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         
         this.hospital = hospital;
-        this.logoname.setText(this.hospital.getNombre());
+        this.lblNombreHospital.setText(this.hospital.getNombre());
+
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -38,7 +39,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
-        logoname = new javax.swing.JLabel();
+        lblNombreHospital = new javax.swing.JLabel();
         citybg = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
         exitBtn = new javax.swing.JPanel();
@@ -65,12 +66,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autonoma.hospitalsanjose.images/logo.png"))); // NOI18N
         jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, 290, 140));
 
-        logoname.setBackground(new java.awt.Color(255, 255, 255));
-        logoname.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        logoname.setForeground(new java.awt.Color(0, 0, 0));
-        logoname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logoname.setText("NOMBRE EMPRESA");
-        jPanel1.add(logoname, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 250, 290, 20));
+        lblNombreHospital.setBackground(new java.awt.Color(255, 255, 255));
+        lblNombreHospital.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        lblNombreHospital.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNombreHospital.setText("NOMBRE EMPRESA");
+        jPanel1.add(lblNombreHospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 250, 290, 20));
 
         citybg.setBackground(new java.awt.Color(0, 134, 190));
         citybg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autonoma.hospitalsanjose.images/city.png"))); // NOI18N
@@ -427,8 +427,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel favicon;
     private javax.swing.JPanel header;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblNombreHospital;
     private javax.swing.JLabel logo;
-    private javax.swing.JLabel logoname;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

@@ -8,7 +8,6 @@ import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
- *
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
  * @versión 1.0.0
  * @since 2024-04-08

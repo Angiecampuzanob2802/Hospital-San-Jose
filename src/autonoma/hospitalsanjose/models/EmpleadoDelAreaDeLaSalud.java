@@ -30,14 +30,14 @@ public class EmpleadoDelAreaDeLaSalud extends Empleado{
      * @param especialidad La especialidad del empleado del área de la salud.
      * @param horasTrabajadas El número de horas trabajadas por el empleado del área de la salud.
      * @param nombre  El nombre del empleado.
-     * @param identificacion La identificación del empleado
+     * @param id La identificación del empleado
      * @param edad La edad del empleado.    
      * @param salarioBase El salario base del empleado.
      * @param hospital El hospital donde trabajan los empleados
      * @param salarioTotal El salario total de los empleados
      */
-    public EmpleadoDelAreaDeLaSalud(String especialidad, double horasTrabajadas, String nombre, String identificacion, int edad, double salarioBase,Hospital hospital,double salarioTotal) {
-        super(nombre, identificacion, edad, salarioBase,hospital,salarioTotal);
+    public EmpleadoDelAreaDeLaSalud(String especialidad, double horasTrabajadas, String nombre, long id, int edad, double salarioBase,Hospital hospital,double salarioTotal) {
+        super(nombre, id, edad, salarioBase,hospital,salarioTotal);
         this.especialidad = especialidad;
         this.horasTrabajadas = horasTrabajadas;
         calcularSalarioTotal();

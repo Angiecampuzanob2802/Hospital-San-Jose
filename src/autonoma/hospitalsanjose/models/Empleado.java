@@ -29,7 +29,7 @@ public abstract class Empleado {
     /**
      * La identificación del empleado
      */
-    private String identificacion;
+    private long id;
     /**
      * La edad del empleado
      */
@@ -46,25 +46,29 @@ public abstract class Empleado {
      * El salario total de los empleados
      */
      public double salarioTotal;
-     
+
     //// constructor con parametros 
     /**
      * Constructor de la clase Emleado
      * @param nombre El nombre del empleado
-     * @param identificacion La identificación del empleado
+     * @param id La identificación del empleado
      * @param edad La edad del empleado
      * @param salarioBase El salario base del empleado
      * @param hospital El hospital en el que trabajan los empleados
      * @param salarioTotal El salario total del empleado
      */
-    public Empleado(String nombre, String identificacion, int edad, double salarioBase,Hospital hospital,double salarioTotal) {
+    public Empleado(String nombre, long id, int edad, double salarioBase,Hospital hospital,double salarioTotal) {
         this.nombre = nombre;
-        this.identificacion = identificacion;
+        this.id = id;
         this.edad = edad;
         this.salarioBase = salarioBase;
         this.hospital = hospital;
         this.salarioTotal = salarioTotal;
     }
+
+    public Empleado() {
+    }
+    
 
     //// metodos de acceso
     public String getNombre() {
@@ -75,12 +79,12 @@ public abstract class Empleado {
         this.nombre = nombre;
     }
 
-    public String getIdentificacion() {
-        return identificacion;
+    public long getId() {
+        return id;
     }
 
-    public void setIdentificacion(String identificacion) {
-        this.identificacion = identificacion;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public int getEdad() {
@@ -137,13 +141,13 @@ public abstract class Empleado {
                 String[] partes = linea.split(";");
                 
                 if(partes[4].equals("Operativo")){
-                    Empleado empleado = new EmpleadoOperativo(partes[0],partes[1],Integer.parseInt(partes[2]),Integer.parseInt(partes[3]) ,partes[5], hospital,salarioTotal);
+                    Empleado empleado = new EmpleadoOperativo(partes[0],Integer.parseInt(partes[1]),Integer.parseInt(partes[2]),Integer.parseInt(partes[3]) ,partes[5], hospital,salarioTotal);
                     empleados.add(empleado);
                     if(partes.length == 6){
                         linea += ";" + empleado.getSalarioTotal();
                     }
                 }else{
-                    Empleado empleado = new EmpleadoDelAreaDeLaSalud(partes[0],Integer.parseInt(partes[1]),partes [2],partes[3],Integer.parseInt(partes[5]),Integer.parseInt(partes[6]), hospital,salarioTotal);
+                    Empleado empleado = new EmpleadoDelAreaDeLaSalud(partes[0],Integer.parseInt(partes[1]),partes [2],Integer.parseInt(partes[3]),Integer.parseInt(partes[5]),Integer.parseInt(partes[6]), hospital,salarioTotal);
                     empleados.add(empleado);
                     if(partes.length == 7){
                         linea += ";" + empleado.getSalarioTotal();
@@ -179,17 +183,15 @@ public abstract class Empleado {
         FileWriter writer = new FileWriter(fichero,false);
         PrintWriter pw = new PrintWriter(writer);
         
-        pw.println(empleado.getNombre()+";"+ empleado.getIdentificacion()+";"+ empleado.getEdad()+";"+ empleado.getSalarioBase()+";"+ tipo);
+        pw.println(empleado.getNombre()+";"+ empleado.getId()+";"+ empleado.getEdad()+";"+ empleado.getSalarioBase()+";"+ tipo);
         pw.close();
     }
     public abstract void calcularSalarioTotal();
     
     public static void actualizarSalariosArchivo(ArrayList<String> lineas, String rutaArchivo){
-        try
-        {
+        try{
             FileWriter escritor = new FileWriter(rutaArchivo);
-            for (String linea : lineas)
-            {
+            for (String linea : lineas){
                 escritor.write(linea + "\n");
             }
             escritor.close();

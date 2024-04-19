@@ -309,4 +309,63 @@ public class Hospital {
     public boolean iniciarSesion(String user, String password){
         return this.administrador.getUsername().equals(user) && this.administrador.getPassword().equals(password);
     }
+    // CRUD DE EMPLEADOS
+    public boolean agregarEmpleado(Empleado empleado){
+        return this.empleados.add(empleado);
+    }
+    public Empleado buscarEmpleado(Empleado empleado){
+        for(int i=0;i<this.empleados.size();i++){
+            Empleado e = this.empleados.get(i);
+            if(e.equals(empleado)){
+                return e;
+            }
+        }
+        return null;   
+    }
+    public Empleado buscarEmpleado(long id){
+        for(int i=0;i<this.empleados.size();i++){
+            Empleado e = this.empleados.get(i);
+            if(e.getId()== id){
+                return e;
+            }
+        }
+        return null;
+    }
+    public Empleado buscarEmpleado(String nombre){
+        
+        for(int i=0;i<this.empleados.size();i++){
+            Empleado e = this.empleados.get(i);
+            if(e.getNombre().equals(nombre)){
+                return e;
+            }
+        }
+        return null;   
+    }
+    private int buscarIndiceEmpleado(long id){
+        for(int i=0;i<this.empleados.size();i++){
+            Empleado e = this.empleados.get(i);
+            if(e.getId() == id){
+                return i;
+            }
+        }
+        return -1;  
+    }
+   
+    public Empleado actualizarEmpleo(long id,Empleado empleado){
+        int index = this.buscarIndiceEmpleado(id);
+        if(index>=0){
+            return this.empleados.set(index,empleado);
+        }else{
+            return null;
+        }
+    }
+    
+    public Empleado eliminarEmpleado(long id){
+        int index = this.buscarIndiceEmpleado(id);
+        if(index>=0){
+            return this.empleados.remove(index);
+        }else{
+            return null;
+        }
+    }    
 }

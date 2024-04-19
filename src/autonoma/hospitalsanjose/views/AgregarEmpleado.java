@@ -11,8 +11,9 @@ import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Usuario
+ *@author Angie Campuzano Betancur & Brayan Estivel Díaz
+ * @versión 1.0.0
+ * @since 2024-04-08
  */
 public class AgregarEmpleado extends javax.swing.JDialog {
  
@@ -389,7 +390,6 @@ public class AgregarEmpleado extends javax.swing.JDialog {
     private void btnAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarMouseClicked
         String nombre = this.TxtNombre.getText();
         String identificacion = this.TxtIdentificacion.getText();
-        
         
         if(TxtNombre.getText().isEmpty() || TxtIdentificacion.getText().isEmpty() || TxtEdad.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "Llene todos los campos ");

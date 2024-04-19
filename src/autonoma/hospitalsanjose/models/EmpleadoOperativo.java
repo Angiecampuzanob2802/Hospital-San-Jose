@@ -23,15 +23,15 @@ public class EmpleadoOperativo extends Empleado{
     /**
      * Constructor de la clase EmpleadoOperativo.
      * @param nombre El nombre del empleado
-     * @param identificacion La identificación del empleado.
+     * @param id La identificación del empleado.
      * @param edad La edad del empleado
      * @param salarioBase El salario base del empleado
      * @param areaTrabajo El area de trabajo del empleado
      * @param hospital El hospital es donde trabajan los empleados
      * @param salarioTotal El salario total del empleado
      */
-    public EmpleadoOperativo(String nombre, String identificacion, int edad, double salarioBase, String areaTrabajo,Hospital hospital,double salarioTotal){
-        super(nombre, identificacion, edad, salarioBase,hospital,salarioTotal);
+    public EmpleadoOperativo(String nombre, long id, int edad, double salarioBase, String areaTrabajo,Hospital hospital,double salarioTotal){
+        super(nombre, id, edad, salarioBase,hospital,salarioTotal);
         this.areaTrabajo = areaTrabajo;
     }
     //// metodos de acceso

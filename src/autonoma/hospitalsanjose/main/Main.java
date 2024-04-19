@@ -45,8 +45,6 @@ public class Main {
         hospital.setPacientes(listaPacientes);
         hospital.setInventario(inventario);
         
-        
-        
         VentanaPrincipal ventana = new VentanaPrincipal(hospital);
         InicioHospital login = new InicioHospital(ventana, true, hospital, ventana);
         login.setVisible(true);
