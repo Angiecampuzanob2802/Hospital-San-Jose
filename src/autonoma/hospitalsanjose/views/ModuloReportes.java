@@ -4,19 +4,30 @@
  */
 package autonoma.hospitalsanjose.views;
 
+import autonoma.hospitalsanjose.models.Hospital;
+import java.awt.Color;
+
 /**
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
  * @versión 0.1.6
  * @since 2024-04-08
  */
 public class ModuloReportes extends javax.swing.JDialog {
-
+    
+    private int xMouse, yMouse;
+    private Hospital hospital;
+    private VentanaPrincipal ventanaPrincipal;
     /**
      * Creates new form ModuloReportes
      */
-    public ModuloReportes(java.awt.Frame parent, boolean modal) {
+    public ModuloReportes(java.awt.Frame parent, boolean modal, Hospital hospital, VentanaPrincipal ventana) {
         super(parent, modal);
         initComponents();
+        
+        this.setLocationRelativeTo(null);
+        
+        this.hospital = hospital;
+        this.ventanaPrincipal = ventana;
     }
 
     /**
@@ -28,64 +39,506 @@ public class ModuloReportes extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        logo = new javax.swing.JLabel();
+        logoname = new javax.swing.JLabel();
+        citybg = new javax.swing.JLabel();
+        header = new javax.swing.JPanel();
+        exitBtn = new javax.swing.JPanel();
+        exitTxt = new javax.swing.JLabel();
+        favicon = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
+        BtnInventario = new javax.swing.JPanel();
+        jLInventario = new javax.swing.JLabel();
+        BtnFarmacia = new javax.swing.JPanel();
+        jLFarmacia = new javax.swing.JLabel();
+        BtnNomina = new javax.swing.JPanel();
+        jLNomina = new javax.swing.JLabel();
+        BtnTrabajadores = new javax.swing.JPanel();
+        JlTrabajadores = new javax.swing.JLabel();
+        BtnGenerar = new javax.swing.JPanel();
+        JlGenerar = new javax.swing.JLabel();
+        BtnVolver = new javax.swing.JPanel();
+        jLVolver = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autonoma.hospitalsanjose.images/logo.png"))); // NOI18N
+        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, 290, 140));
+
+        logoname.setBackground(new java.awt.Color(255, 255, 255));
+        logoname.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        logoname.setForeground(new java.awt.Color(0, 0, 0));
+        logoname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logoname.setText("NOMBRE EMPRESA");
+        jPanel1.add(logoname, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 250, 290, 20));
+
+        citybg.setBackground(new java.awt.Color(0, 134, 190));
+        citybg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autonoma.hospitalsanjose.images/city.png"))); // NOI18N
+        jPanel1.add(citybg, new org.netbeans.lib.awtextra.AbsoluteConstraints(548, 0, -1, 500));
+
+        header.setBackground(new java.awt.Color(255, 255, 255));
+        header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                headerMouseDragged(evt);
+            }
+        });
+        header.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                headerMousePressed(evt);
+            }
+        });
+
+        exitBtn.setBackground(new java.awt.Color(255, 255, 255));
+
+        exitTxt.setFont(new java.awt.Font("Roboto Light", 0, 24)); // NOI18N
+        exitTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exitTxt.setText("X");
+        exitTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        exitTxt.setPreferredSize(new java.awt.Dimension(40, 40));
+        exitTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitTxtMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exitTxtMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exitTxtMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout exitBtnLayout = new javax.swing.GroupLayout(exitBtn);
+        exitBtn.setLayout(exitBtnLayout);
+        exitBtnLayout.setHorizontalGroup(
+            exitBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exitTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        exitBtnLayout.setVerticalGroup(
+            exitBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exitTxt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
+        header.setLayout(headerLayout);
+        headerLayout.setHorizontalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerLayout.createSequentialGroup()
+                .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 800, Short.MAX_VALUE))
+        );
+        headerLayout.setVerticalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exitBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 40));
+
+        favicon.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
+        favicon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autonoma.hospitalsanjose.images/favicon.png"))); // NOI18N
+        favicon.setText("LOGO");
+        jPanel1.add(favicon, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
+
+        title.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
+        title.setText("REPORTES");
+        jPanel1.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
+
+        BtnInventario.setBackground(new java.awt.Color(0, 134, 190));
+
+        jLInventario.setFont(new java.awt.Font("Roboto Condensed", 1, 14)); // NOI18N
+        jLInventario.setForeground(new java.awt.Color(255, 255, 255));
+        jLInventario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLInventario.setText("INVENTARIO");
+        jLInventario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLInventario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLInventarioMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLInventarioMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLInventarioMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout BtnInventarioLayout = new javax.swing.GroupLayout(BtnInventario);
+        BtnInventario.setLayout(BtnInventarioLayout);
+        BtnInventarioLayout.setHorizontalGroup(
+            BtnInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnInventarioLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        BtnInventarioLayout.setVerticalGroup(
+            BtnInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnInventarioLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel1.add(BtnInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 130, 40));
+
+        BtnFarmacia.setBackground(new java.awt.Color(0, 134, 190));
+
+        jLFarmacia.setFont(new java.awt.Font("Roboto Condensed", 1, 14)); // NOI18N
+        jLFarmacia.setForeground(new java.awt.Color(255, 255, 255));
+        jLFarmacia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLFarmacia.setText("FARMACIA");
+        jLFarmacia.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLFarmacia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLFarmaciaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLFarmaciaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLFarmaciaMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout BtnFarmaciaLayout = new javax.swing.GroupLayout(BtnFarmacia);
+        BtnFarmacia.setLayout(BtnFarmaciaLayout);
+        BtnFarmaciaLayout.setHorizontalGroup(
+            BtnFarmaciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnFarmaciaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLFarmacia, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        BtnFarmaciaLayout.setVerticalGroup(
+            BtnFarmaciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnFarmaciaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLFarmacia, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel1.add(BtnFarmacia, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
+
+        BtnNomina.setBackground(new java.awt.Color(0, 134, 190));
+
+        jLNomina.setFont(new java.awt.Font("Roboto Condensed", 1, 14)); // NOI18N
+        jLNomina.setForeground(new java.awt.Color(255, 255, 255));
+        jLNomina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLNomina.setText("NOMINA");
+        jLNomina.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLNomina.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLNominaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLNominaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLNominaMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout BtnNominaLayout = new javax.swing.GroupLayout(BtnNomina);
+        BtnNomina.setLayout(BtnNominaLayout);
+        BtnNominaLayout.setHorizontalGroup(
+            BtnNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnNominaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        BtnNominaLayout.setVerticalGroup(
+            BtnNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnNominaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel1.add(BtnNomina, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, -1, -1));
+
+        BtnTrabajadores.setBackground(new java.awt.Color(0, 134, 190));
+
+        JlTrabajadores.setFont(new java.awt.Font("Roboto Condensed", 1, 14)); // NOI18N
+        JlTrabajadores.setForeground(new java.awt.Color(255, 255, 255));
+        JlTrabajadores.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JlTrabajadores.setText("TRABAJADORES");
+        JlTrabajadores.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        JlTrabajadores.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JlTrabajadoresMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                JlTrabajadoresMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                JlTrabajadoresMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout BtnTrabajadoresLayout = new javax.swing.GroupLayout(BtnTrabajadores);
+        BtnTrabajadores.setLayout(BtnTrabajadoresLayout);
+        BtnTrabajadoresLayout.setHorizontalGroup(
+            BtnTrabajadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnTrabajadoresLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(JlTrabajadores, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        BtnTrabajadoresLayout.setVerticalGroup(
+            BtnTrabajadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnTrabajadoresLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(JlTrabajadores, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel1.add(BtnTrabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 130, 40));
+
+        BtnGenerar.setBackground(new java.awt.Color(0, 134, 190));
+
+        JlGenerar.setFont(new java.awt.Font("Roboto Condensed", 1, 14)); // NOI18N
+        JlGenerar.setForeground(new java.awt.Color(255, 255, 255));
+        JlGenerar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JlGenerar.setText("GENERAR");
+        JlGenerar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        JlGenerar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JlGenerarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                JlGenerarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                JlGenerarMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout BtnGenerarLayout = new javax.swing.GroupLayout(BtnGenerar);
+        BtnGenerar.setLayout(BtnGenerarLayout);
+        BtnGenerarLayout.setHorizontalGroup(
+            BtnGenerarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnGenerarLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(JlGenerar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        BtnGenerarLayout.setVerticalGroup(
+            BtnGenerarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnGenerarLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(JlGenerar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel1.add(BtnGenerar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, -1, -1));
+
+        BtnVolver.setBackground(new java.awt.Color(0, 134, 190));
+
+        jLVolver.setFont(new java.awt.Font("Roboto Condensed", 1, 14)); // NOI18N
+        jLVolver.setForeground(new java.awt.Color(255, 255, 255));
+        jLVolver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLVolver.setText("VOLVER");
+        jLVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLVolver.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLVolverMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLVolverMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLVolverMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout BtnVolverLayout = new javax.swing.GroupLayout(BtnVolver);
+        BtnVolver.setLayout(BtnVolverLayout);
+        BtnVolverLayout.setHorizontalGroup(
+            BtnVolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnVolverLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        BtnVolverLayout.setVerticalGroup(
+            BtnVolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnVolverLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel1.add(BtnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ModuloReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ModuloReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ModuloReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ModuloReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void exitTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_exitTxtMouseClicked
 
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                ModuloReportes dialog = new ModuloReportes(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
+    private void exitTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseEntered
+        exitBtn.setBackground(Color.red);
+        exitTxt.setForeground(Color.white);
+    }//GEN-LAST:event_exitTxtMouseEntered
+
+    private void exitTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseExited
+        exitBtn.setBackground(Color.white);
+        exitTxt.setForeground(Color.black);
+    }//GEN-LAST:event_exitTxtMouseExited
+
+    private void headerMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xMouse, y - yMouse);
+    }//GEN-LAST:event_headerMouseDragged
+
+    private void headerMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_headerMousePressed
+
+    private void jLInventarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLInventarioMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLInventarioMouseClicked
+
+    private void jLInventarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLInventarioMouseEntered
+        BtnInventario.setBackground(new Color(0, 156, 223));
+    }//GEN-LAST:event_jLInventarioMouseEntered
+
+    private void jLInventarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLInventarioMouseExited
+        BtnInventario.setBackground(new Color(0,134,190));
+    }//GEN-LAST:event_jLInventarioMouseExited
+
+    private void jLFarmaciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLFarmaciaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLFarmaciaMouseClicked
+
+    private void jLFarmaciaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLFarmaciaMouseEntered
+        BtnInventario.setBackground(new Color(0, 156, 223));
+    }//GEN-LAST:event_jLFarmaciaMouseEntered
+
+    private void jLFarmaciaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLFarmaciaMouseExited
+        BtnInventario.setBackground(new Color(0,134,190));
+    }//GEN-LAST:event_jLFarmaciaMouseExited
+
+    private void jLNominaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLNominaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLNominaMouseClicked
+
+    private void jLNominaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLNominaMouseEntered
+        BtnInventario.setBackground(new Color(0, 156, 223));
+    }//GEN-LAST:event_jLNominaMouseEntered
+
+    private void jLNominaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLNominaMouseExited
+        BtnInventario.setBackground(new Color(0,134,190));
+    }//GEN-LAST:event_jLNominaMouseExited
+
+    private void jLVolverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLVolverMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_jLVolverMouseClicked
+
+    private void jLVolverMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLVolverMouseEntered
+        BtnInventario.setBackground(new Color(0, 156, 223));
+    }//GEN-LAST:event_jLVolverMouseEntered
+
+    private void jLVolverMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLVolverMouseExited
+        BtnInventario.setBackground(new Color(0,134,190));
+    }//GEN-LAST:event_jLVolverMouseExited
+
+    private void JlTrabajadoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlTrabajadoresMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JlTrabajadoresMouseClicked
+
+    private void JlTrabajadoresMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlTrabajadoresMouseEntered
+        BtnTrabajadores.setBackground(new Color(0, 156, 223));
+    }//GEN-LAST:event_JlTrabajadoresMouseEntered
+
+    private void JlTrabajadoresMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlTrabajadoresMouseExited
+        BtnTrabajadores.setBackground(new Color(0, 134, 190));
+    }//GEN-LAST:event_JlTrabajadoresMouseExited
+
+    private void JlGenerarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlGenerarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JlGenerarMouseClicked
+
+    private void JlGenerarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlGenerarMouseEntered
+        BtnGenerar.setBackground(new Color(0, 156, 223));
+    }//GEN-LAST:event_JlGenerarMouseEntered
+
+    private void JlGenerarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlGenerarMouseExited
+        BtnGenerar.setBackground(new Color(0, 134, 190));
+    }//GEN-LAST:event_JlGenerarMouseExited
+
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(ModuloReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(ModuloReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(ModuloReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(ModuloReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the dialog */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                ModuloReportes dialog = new ModuloReportes(new javax.swing.JFrame(), true);
+//                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+//                    @Override
+//                    public void windowClosing(java.awt.event.WindowEvent e) {
+//                        System.exit(0);
+//                    }
+//                });
+//                dialog.setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BtnFarmacia;
+    private javax.swing.JPanel BtnGenerar;
+    private javax.swing.JPanel BtnInventario;
+    private javax.swing.JPanel BtnNomina;
+    private javax.swing.JPanel BtnTrabajadores;
+    private javax.swing.JPanel BtnVolver;
+    private javax.swing.JLabel JlGenerar;
+    private javax.swing.JLabel JlTrabajadores;
+    private javax.swing.JLabel citybg;
+    private javax.swing.JPanel exitBtn;
+    private javax.swing.JLabel exitTxt;
+    private javax.swing.JLabel favicon;
+    private javax.swing.JPanel header;
+    private javax.swing.JLabel jLFarmacia;
+    private javax.swing.JLabel jLInventario;
+    private javax.swing.JLabel jLNomina;
+    private javax.swing.JLabel jLVolver;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel logo;
+    private javax.swing.JLabel logoname;
+    private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

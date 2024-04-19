@@ -4,24 +4,25 @@
  */
 package autonoma.hospitalsanjose.views;
 
+import autonoma.hospitalsanjose.models.Empleado;
+import autonoma.hospitalsanjose.models.EmpleadoDelAreaDeLaSalud;
 import autonoma.hospitalsanjose.models.Hospital;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
- * @author Angie Campuzano Betancur & Brayan Estivel Díaz
- * @versión 0.1.6
- * @since 2024-04-08
+ *
+ * @author Usuario
  */
+public class AgregarEmpleado extends javax.swing.JDialog {
  
-public class ModuloFarmacia extends javax.swing.JDialog {
-     
-    private int xMouse, yMouse;
+    int xMouse, yMouse;
     private Hospital hospital;
     private VentanaPrincipal ventanaPrincipal;
     /**
-     * Creates new form ModuloFarmacia
+     * Creates new form AgregarEmpleado
      */
-    public ModuloFarmacia(java.awt.Frame parent, boolean modal, Hospital hospital, VentanaPrincipal ventana) {
+    public AgregarEmpleado(java.awt.Frame parent, boolean modal, Hospital hospital, VentanaPrincipal ventana) {
         super(parent, modal);
         initComponents();
         
@@ -29,6 +30,7 @@ public class ModuloFarmacia extends javax.swing.JDialog {
         
         this.hospital = hospital;
         this.ventanaPrincipal = ventana;
+        this.logoname.setText(this.hospital.getNombre());
     }
 
     /**
@@ -49,16 +51,25 @@ public class ModuloFarmacia extends javax.swing.JDialog {
         exitTxt = new javax.swing.JLabel();
         favicon = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        userLabel = new javax.swing.JLabel();
+        TxtNombre = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
+        passLabel = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        userLabel1 = new javax.swing.JLabel();
+        TxtIdentificacion = new javax.swing.JTextField();
+        TxtEdad = new javax.swing.JTextField();
+        jSeparator3 = new javax.swing.JSeparator();
+        userLabel2 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        TxtSalarioBase = new javax.swing.JTextField();
         BtnAgregar = new javax.swing.JPanel();
-        JlAgregar = new javax.swing.JLabel();
-        BtnActualizar = new javax.swing.JPanel();
-        JlActualizar = new javax.swing.JLabel();
-        BtnEliminar = new javax.swing.JPanel();
-        JlEliminar = new javax.swing.JLabel();
+        btnAgregar = new javax.swing.JLabel();
         BtnVolver = new javax.swing.JPanel();
         JlVolver = new javax.swing.JLabel();
+        passLabel1 = new javax.swing.JLabel();
+        rdOperativo = new javax.swing.JRadioButton();
+        rdSalud = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -130,7 +141,7 @@ public class ModuloFarmacia extends javax.swing.JDialog {
             headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(headerLayout.createSequentialGroup()
                 .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 800, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         headerLayout.setVerticalGroup(
             headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,43 +153,105 @@ public class ModuloFarmacia extends javax.swing.JDialog {
         favicon.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         favicon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autonoma.hospitalsanjose.images/favicon.png"))); // NOI18N
         favicon.setText("LOGO");
-        jPanel1.add(favicon, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
+        jPanel1.add(favicon, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
 
         title.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
-        title.setText("FARMACIA");
-        jPanel1.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
+        title.setText("AGREGAR EMPLEADOS");
+        jPanel1.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+        userLabel.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        userLabel.setText("EDAD");
+        jPanel1.add(userLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
+
+        TxtNombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        TxtNombre.setForeground(new java.awt.Color(204, 204, 204));
+        TxtNombre.setText("Ingrese su nombre de usuario");
+        TxtNombre.setBorder(null);
+        TxtNombre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                TxtNombreMousePressed(evt);
             }
-        ));
-        jScrollPane2.setViewportView(jTable2);
+        });
+        jPanel1.add(TxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 410, 30));
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, 130));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 410, 20));
+
+        passLabel.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        passLabel.setText("IDENTIFICACION");
+        jPanel1.add(passLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
+
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 410, 20));
+
+        userLabel1.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        userLabel1.setText("SALARIO BASE");
+        jPanel1.add(userLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
+
+        TxtIdentificacion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        TxtIdentificacion.setForeground(new java.awt.Color(204, 204, 204));
+        TxtIdentificacion.setText("Ingrese su nombre de usuario");
+        TxtIdentificacion.setBorder(null);
+        TxtIdentificacion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                TxtIdentificacionMousePressed(evt);
+            }
+        });
+        jPanel1.add(TxtIdentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 410, 30));
+
+        TxtEdad.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        TxtEdad.setForeground(new java.awt.Color(204, 204, 204));
+        TxtEdad.setText("Ingrese su nombre de usuario");
+        TxtEdad.setBorder(null);
+        TxtEdad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                TxtEdadMousePressed(evt);
+            }
+        });
+        TxtEdad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtEdadActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TxtEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 410, 30));
+
+        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 410, 10));
+
+        userLabel2.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        userLabel2.setText("NOMBRE");
+        jPanel1.add(userLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, -1));
+
+        jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 410, 20));
+
+        TxtSalarioBase.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        TxtSalarioBase.setForeground(new java.awt.Color(204, 204, 204));
+        TxtSalarioBase.setText("Ingrese su nombre de usuario");
+        TxtSalarioBase.setBorder(null);
+        TxtSalarioBase.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                TxtSalarioBaseMousePressed(evt);
+            }
+        });
+        jPanel1.add(TxtSalarioBase, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 410, 30));
 
         BtnAgregar.setBackground(new java.awt.Color(0, 134, 190));
 
-        JlAgregar.setFont(new java.awt.Font("Roboto Condensed", 1, 14)); // NOI18N
-        JlAgregar.setForeground(new java.awt.Color(255, 255, 255));
-        JlAgregar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JlAgregar.setText("AGREGAR");
-        JlAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        JlAgregar.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnAgregar.setFont(new java.awt.Font("Roboto Condensed", 1, 14)); // NOI18N
+        btnAgregar.setForeground(new java.awt.Color(255, 255, 255));
+        btnAgregar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnAgregar.setText("AGREGAR");
+        btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnAgregar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                JlAgregarMouseClicked(evt);
+                btnAgregarMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                JlAgregarMouseEntered(evt);
+                btnAgregarMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                JlAgregarMouseExited(evt);
+                btnAgregarMouseExited(evt);
             }
         });
 
@@ -188,88 +261,16 @@ public class ModuloFarmacia extends javax.swing.JDialog {
             BtnAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnAgregarLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(JlAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         BtnAgregarLayout.setVerticalGroup(
             BtnAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnAgregarLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(JlAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel1.add(BtnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 130, 40));
-
-        BtnActualizar.setBackground(new java.awt.Color(0, 134, 190));
-
-        JlActualizar.setFont(new java.awt.Font("Roboto Condensed", 1, 14)); // NOI18N
-        JlActualizar.setForeground(new java.awt.Color(255, 255, 255));
-        JlActualizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JlActualizar.setText("ACTUALIZAR");
-        JlActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        JlActualizar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                JlActualizarMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                JlActualizarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                JlActualizarMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout BtnActualizarLayout = new javax.swing.GroupLayout(BtnActualizar);
-        BtnActualizar.setLayout(BtnActualizarLayout);
-        BtnActualizarLayout.setHorizontalGroup(
-            BtnActualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnActualizarLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(JlActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        BtnActualizarLayout.setVerticalGroup(
-            BtnActualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnActualizarLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(JlActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        jPanel1.add(BtnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, -1, -1));
-
-        BtnEliminar.setBackground(new java.awt.Color(0, 134, 190));
-
-        JlEliminar.setFont(new java.awt.Font("Roboto Condensed", 1, 14)); // NOI18N
-        JlEliminar.setForeground(new java.awt.Color(255, 255, 255));
-        JlEliminar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JlEliminar.setText("ELIMINAR");
-        JlEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        JlEliminar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                JlEliminarMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                JlEliminarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                JlEliminarMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout BtnEliminarLayout = new javax.swing.GroupLayout(BtnEliminar);
-        BtnEliminar.setLayout(BtnEliminarLayout);
-        BtnEliminarLayout.setHorizontalGroup(
-            BtnEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnEliminarLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(JlEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        BtnEliminarLayout.setVerticalGroup(
-            BtnEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnEliminarLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(JlEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        jPanel1.add(BtnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, -1, -1));
+        jPanel1.add(BtnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 130, 40));
 
         BtnVolver.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -305,7 +306,23 @@ public class ModuloFarmacia extends javax.swing.JDialog {
                 .addComponent(JlVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel1.add(BtnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, -1, -1));
+        jPanel1.add(BtnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 450, -1, -1));
+
+        passLabel1.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        passLabel1.setText("TRABAJADOR");
+        jPanel1.add(passLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
+
+        rdOperativo.setBackground(new java.awt.Color(255, 255, 255));
+        rdOperativo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        rdOperativo.setForeground(new java.awt.Color(0, 0, 0));
+        rdOperativo.setText("Operativo");
+        jPanel1.add(rdOperativo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 140, -1));
+
+        rdSalud.setBackground(new java.awt.Color(255, 255, 255));
+        rdSalud.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        rdSalud.setForeground(new java.awt.Color(0, 0, 0));
+        rdSalud.setText("Salud");
+        jPanel1.add(rdSalud, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 110, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -346,41 +363,47 @@ public class ModuloFarmacia extends javax.swing.JDialog {
         yMouse = evt.getY();
     }//GEN-LAST:event_headerMousePressed
 
-    private void JlAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlAgregarMouseClicked
+    private void TxtNombreMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtNombreMousePressed
+        if (TxtNombre.getText().equals("Ingrese su nombre de usuario")) {
+            TxtNombre.setText("");
+            TxtNombre.setForeground(Color.black);
+        }
+//        if (String.valueOf(passTxt.getPassword()).isEmpty()) {
+//            passTxt.setText("********");
+//            passTxt.setForeground(Color.gray);
+//        }
+    }//GEN-LAST:event_TxtNombreMousePressed
+
+    private void TxtIdentificacionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtIdentificacionMousePressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JlAgregarMouseClicked
+    }//GEN-LAST:event_TxtIdentificacionMousePressed
 
-    private void JlAgregarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlAgregarMouseEntered
-        BtnAgregar.setBackground(new Color(0, 156, 223));
-    }//GEN-LAST:event_JlAgregarMouseEntered
-
-    private void JlAgregarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlAgregarMouseExited
-        BtnAgregar.setBackground(new Color(0,134,190));
-    }//GEN-LAST:event_JlAgregarMouseExited
-
-    private void JlActualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlActualizarMouseClicked
+    private void TxtEdadMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtEdadMousePressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JlActualizarMouseClicked
+    }//GEN-LAST:event_TxtEdadMousePressed
 
-    private void JlActualizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlActualizarMouseEntered
-        BtnAgregar.setBackground(new Color(0, 156, 223));
-    }//GEN-LAST:event_JlActualizarMouseEntered
-
-    private void JlActualizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlActualizarMouseExited
-        BtnAgregar.setBackground(new Color(0,134,190));
-    }//GEN-LAST:event_JlActualizarMouseExited
-
-    private void JlEliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlEliminarMouseClicked
+    private void TxtSalarioBaseMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtSalarioBaseMousePressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JlEliminarMouseClicked
+    }//GEN-LAST:event_TxtSalarioBaseMousePressed
 
-    private void JlEliminarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlEliminarMouseEntered
+    private void btnAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarMouseClicked
+        String nombre = this.TxtNombre.getText();
+        String identificacion = this.TxtIdentificacion.getText();
+        
+        
+        if(TxtNombre.getText().isEmpty() || TxtIdentificacion.getText().isEmpty() || TxtEdad.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Llene todos los campos ");
+        }
+        
+    }//GEN-LAST:event_btnAgregarMouseClicked
+
+    private void btnAgregarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarMouseEntered
         BtnAgregar.setBackground(new Color(0, 156, 223));
-    }//GEN-LAST:event_JlEliminarMouseEntered
+    }//GEN-LAST:event_btnAgregarMouseEntered
 
-    private void JlEliminarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlEliminarMouseExited
+    private void btnAgregarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarMouseExited
         BtnAgregar.setBackground(new Color(0,134,190));
-    }//GEN-LAST:event_JlEliminarMouseExited
+    }//GEN-LAST:event_btnAgregarMouseExited
 
     private void JlVolverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlVolverMouseClicked
         this.dispose();
@@ -393,6 +416,10 @@ public class ModuloFarmacia extends javax.swing.JDialog {
     private void JlVolverMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlVolverMouseExited
         BtnAgregar.setBackground(new Color(0,134,190));
     }//GEN-LAST:event_JlVolverMouseExited
+
+    private void TxtEdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtEdadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtEdadActionPerformed
 
 //    /**
 //     * @param args the command line arguments
@@ -411,20 +438,20 @@ public class ModuloFarmacia extends javax.swing.JDialog {
 //                }
 //            }
 //        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(ModuloFarmacia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(AgregarEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(ModuloFarmacia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(AgregarEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(ModuloFarmacia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(AgregarEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(ModuloFarmacia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(AgregarEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        }
 //        //</editor-fold>
 //
 //        /* Create and display the dialog */
 //        java.awt.EventQueue.invokeLater(new Runnable() {
 //            public void run() {
-//                ModuloFarmacia dialog = new ModuloFarmacia(new javax.swing.JFrame(), true);
+//                AgregarEmpleado dialog = new AgregarEmpleado(new javax.swing.JFrame(), true);
 //                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
 //                    @Override
 //                    public void windowClosing(java.awt.event.WindowEvent e) {
@@ -437,24 +464,33 @@ public class ModuloFarmacia extends javax.swing.JDialog {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel BtnActualizar;
     private javax.swing.JPanel BtnAgregar;
-    private javax.swing.JPanel BtnEliminar;
     private javax.swing.JPanel BtnVolver;
-    private javax.swing.JLabel JlActualizar;
-    private javax.swing.JLabel JlAgregar;
-    private javax.swing.JLabel JlEliminar;
     private javax.swing.JLabel JlVolver;
+    private javax.swing.JTextField TxtEdad;
+    private javax.swing.JTextField TxtIdentificacion;
+    private javax.swing.JTextField TxtNombre;
+    private javax.swing.JTextField TxtSalarioBase;
+    private javax.swing.JLabel btnAgregar;
     private javax.swing.JLabel citybg;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitTxt;
     private javax.swing.JLabel favicon;
     private javax.swing.JPanel header;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel logoname;
+    private javax.swing.JLabel passLabel;
+    private javax.swing.JLabel passLabel1;
+    private javax.swing.JRadioButton rdOperativo;
+    private javax.swing.JRadioButton rdSalud;
     private javax.swing.JLabel title;
+    private javax.swing.JLabel userLabel;
+    private javax.swing.JLabel userLabel1;
+    private javax.swing.JLabel userLabel2;
     // End of variables declaration//GEN-END:variables
 }

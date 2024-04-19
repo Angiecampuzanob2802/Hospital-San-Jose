@@ -5,8 +5,6 @@
 package autonoma.hospitalsanjose.views;
 import autonoma.hospitalsanjose.models.Hospital;
 import java.awt.Color;
-import java.awt.Image;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,19 +17,16 @@ public class InicioHospital extends javax.swing.JFrame {
 
     int xMouse, yMouse;
     private Hospital hospital;
-    private VentanaPrincipalHospital ventanaPrincipal;
+    private VentanaPrincipal ventanaPrincipal;
     
-    public InicioHospital(java.awt.Frame parent, boolean modal,Hospital hospital,VentanaPrincipalHospital ventana) {
+    public InicioHospital(java.awt.Frame parent, boolean modal,Hospital hospital,VentanaPrincipal ventana) {
 
         initComponents();
         this.setLocationRelativeTo(null);
-        try {
-            this.setIconImage(new ImageIcon(getClass().getResource("")).getImage());
-        } catch (Exception e) {
-        }
         
         this.hospital = hospital;
         this.ventanaPrincipal = ventana;
+        this.logoname.setText(this.hospital.getNombre());
     }
 
     /**
@@ -58,12 +53,12 @@ public class InicioHospital extends javax.swing.JFrame {
         passLabel = new javax.swing.JLabel();
         passTxt = new javax.swing.JPasswordField();
         jSeparator2 = new javax.swing.JSeparator();
-        loginBtn = new javax.swing.JPanel();
-        btnIniciarSesion1 = new javax.swing.JLabel();
-        salirbtn = new javax.swing.JPanel();
-        btnsalir = new javax.swing.JLabel();
+        btEntrar = new javax.swing.JButton();
+        btSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -74,7 +69,7 @@ public class InicioHospital extends javax.swing.JFrame {
 
         logoname.setBackground(new java.awt.Color(255, 255, 255));
         logoname.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        logoname.setForeground(new java.awt.Color(255, 255, 255));
+        logoname.setForeground(new java.awt.Color(0, 0, 0));
         logoname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logoname.setText("NOMBRE EMPRESA");
         bg.add(logoname, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 250, 290, 20));
@@ -184,77 +179,25 @@ public class InicioHospital extends javax.swing.JFrame {
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
         bg.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 410, 20));
 
-        loginBtn.setBackground(new java.awt.Color(0, 134, 190));
-
-        btnIniciarSesion1.setFont(new java.awt.Font("Roboto Condensed", 1, 14)); // NOI18N
-        btnIniciarSesion1.setForeground(new java.awt.Color(255, 255, 255));
-        btnIniciarSesion1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnIniciarSesion1.setText("ENTRAR");
-        btnIniciarSesion1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnIniciarSesion1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnIniciarSesion1MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnIniciarSesion1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnIniciarSesion1MouseExited(evt);
+        btEntrar.setBackground(new java.awt.Color(0, 134, 190));
+        btEntrar.setForeground(new java.awt.Color(0, 0, 0));
+        btEntrar.setText("ENTRAR");
+        btEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btEntrarActionPerformed(evt);
             }
         });
+        bg.add(btEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 130, 40));
 
-        javax.swing.GroupLayout loginBtnLayout = new javax.swing.GroupLayout(loginBtn);
-        loginBtn.setLayout(loginBtnLayout);
-        loginBtnLayout.setHorizontalGroup(
-            loginBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginBtnLayout.createSequentialGroup()
-                .addComponent(btnIniciarSesion1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        loginBtnLayout.setVerticalGroup(
-            loginBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginBtnLayout.createSequentialGroup()
-                .addComponent(btnIniciarSesion1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        bg.add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 130, 40));
-
-        salirbtn.setBackground(new java.awt.Color(0, 134, 190));
-
-        btnsalir.setFont(new java.awt.Font("Roboto Condensed", 1, 14)); // NOI18N
-        btnsalir.setForeground(new java.awt.Color(255, 255, 255));
-        btnsalir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnsalir.setText("SALIR");
-        btnsalir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnsalir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnsalirMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnsalirMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnsalirMouseExited(evt);
+        btSalir.setBackground(new java.awt.Color(0, 134, 190));
+        btSalir.setForeground(new java.awt.Color(0, 0, 0));
+        btSalir.setText("SALIR");
+        btSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSalirActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout salirbtnLayout = new javax.swing.GroupLayout(salirbtn);
-        salirbtn.setLayout(salirbtnLayout);
-        salirbtnLayout.setHorizontalGroup(
-            salirbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, salirbtnLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        salirbtnLayout.setVerticalGroup(
-            salirbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, salirbtnLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        bg.add(salirbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, 130, 40));
+        bg.add(btSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 410, 130, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -317,34 +260,28 @@ public class InicioHospital extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_passTxtMousePressed
 
-    private void btnsalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsalirMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnsalirMouseClicked
+    private void btEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEntrarActionPerformed
+        String username = this.userTxt.getText();
+        String password = this.passTxt.getText();
+        
+        if(this.hospital.iniciarSesion(username,password)){
+            this.ventanaPrincipal.setVisible(true);
+            this.dispose();
+        }else{
+            JOptionPane.showMessageDialog(this, "Credenciales invalidas, por favor intente de nuevo");
+            this.userTxt.setText("");
+            this.passTxt.setText("");
+        }
+    }//GEN-LAST:event_btEntrarActionPerformed
 
-    private void btnsalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsalirMouseEntered
-        loginBtn.setBackground(new Color(0, 156, 223));
-    }//GEN-LAST:event_btnsalirMouseEntered
-
-    private void btnsalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsalirMouseExited
-        loginBtn.setBackground(new Color(0,134,190));
-    }//GEN-LAST:event_btnsalirMouseExited
-
-    private void btnIniciarSesion1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIniciarSesion1MouseExited
-        loginBtn.setBackground(new Color(0,134,190));
-    }//GEN-LAST:event_btnIniciarSesion1MouseExited
-
-    private void btnIniciarSesion1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIniciarSesion1MouseEntered
-        loginBtn.setBackground(new Color(0, 156, 223));
-    }//GEN-LAST:event_btnIniciarSesion1MouseEntered
-
-    private void btnIniciarSesion1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIniciarSesion1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnIniciarSesion1MouseClicked
+    private void btSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btSalirActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
-    private javax.swing.JLabel btnIniciarSesion1;
-    private javax.swing.JLabel btnsalir;
+    private javax.swing.JButton btEntrar;
+    private javax.swing.JButton btSalir;
     private javax.swing.JLabel citybg;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitTxt;
@@ -352,12 +289,10 @@ public class InicioHospital extends javax.swing.JFrame {
     private javax.swing.JPanel header;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JPanel loginBtn;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel logoname;
     private javax.swing.JLabel passLabel;
     private javax.swing.JPasswordField passTxt;
-    private javax.swing.JPanel salirbtn;
     private javax.swing.JLabel title;
     private javax.swing.JLabel userLabel;
     private javax.swing.JTextField userTxt;

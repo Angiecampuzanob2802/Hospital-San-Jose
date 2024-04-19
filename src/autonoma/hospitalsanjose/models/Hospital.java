@@ -306,4 +306,8 @@ public class Hospital {
         return false;
     }
 
+    
+    public boolean iniciarSesion(String user, String password){
+        return this.administrador.getUsername().equals(user) && this.administrador.getPassword().equals(password);
+    }
 }

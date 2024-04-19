@@ -43,7 +43,7 @@ public class Main {
         hospital.setPacientes(listaPacientes);
         hospital.setInventario(inventario);
         
-        VentanaPrincipalHospital ventana = new VentanaPrincipalHospital(hospital);
+        VentanaPrincipal ventana = new VentanaPrincipal(hospital);
         InicioHospital login = new InicioHospital(ventana, true, hospital, ventana);
         login.setVisible(true);
     }
