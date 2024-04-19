@@ -199,4 +199,25 @@ public abstract class Empleado {
             e.printStackTrace();
         }
     }
+    public boolean agregarEmpleado(Empleado empleado){
+       return this.hospital.agregarEmpleado(empleado);
+    }
+    public Empleado buscarEmpleado(Empleado empleado){
+        return this.hospital.buscarEmpleado(empleado);
+    }
+     public Empleado buscarProducto(long id){
+       return this.hospital.buscarEmpleado(id);
+    }
+     
+     public Empleado buscarProducto(String nombre){
+         return this.hospital.buscarEmpleado(nombre);
+   }
+    
+   public Empleado actualizarProducto(long id,Empleado empleado){
+       return this.hospital.actualizarEmpleo(id,empleado);
+    }
+     
+    public Empleado eliminarProducto(long id){
+        return this.hospital.eliminarEmpleado(id);  
+    }  
 }

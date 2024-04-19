@@ -27,6 +27,7 @@ public class Main {
         Hospital hospital = Hospital.crearGerenteDesdeArchivo();
         Administrador administrador= new Administrador("Aarong","12345678","Angie","1059813913",29,"Salud Publica");
         hospital.setAdministrador(administrador);
+        
        // Lectura archivos Medicamentos 
         ArrayList<Medicamento> listaMedicamentos = Medicamento.crearMedicamentoDesdeArchivo();
         //Lectura Archivo Empleados
