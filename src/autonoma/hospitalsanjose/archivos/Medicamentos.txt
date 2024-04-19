@@ -1,11 +1,3 @@
-Empaglifozina 
-Hidroclorotiazida   
-Sildenafil
-Rosuvastatina
-Prednisolona
-Nitrofurazona
-Alopurinol
-Azatioprina
-Bilastina
-Timolol
-
+Dexametasona;es utilizado para;560;0;600
+Diclofenaco;es utilizado para;1000;1;Vitalis;1300
+Tramadol;es utilizado para;400;1;Procaps;450

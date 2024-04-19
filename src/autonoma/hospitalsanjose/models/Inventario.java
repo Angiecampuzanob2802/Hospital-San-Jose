@@ -10,11 +10,11 @@ import java.util.ArrayList;
  * con su identificador, año de actualización y lista de medicamentos.
  * Permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre los medicamentos.
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
- * @version 0.1.6
+ * @version 1.0.0
  * @since 2024-04-09
  */
 public class Inventario {
-    //////////////atributos
+    //////atributos
     /**
      * El Identificar del inventario
      */
@@ -38,7 +38,7 @@ public class Inventario {
     public Inventario(int id, int anoActualizacion, ArrayList<Medicamento> medicamentos) {
         this.id = id;
         this.anoActualizacion = anoActualizacion;
-        this.medicamentos = new ArrayList<>();
+        this.medicamentos = medicamentos;
     }
     ////////////////metodos de acceso
     public int getId() {
@@ -170,11 +170,13 @@ public class Inventario {
             return null;
         }
     }
+
     //////////////////////////metodo para mostrar inventario
     /**
      * Muestra el inventario de medicamentos.
      * @return Una cadena de texto con la información de todos los medicamentos en el inventario.
      */
+    /*
     public String mostrarInventario(){
         String inventario = "";
         for(int i=0;i<this.medicamentos.size();i++){
@@ -183,4 +185,5 @@ public class Inventario {
         }
         return inventario;
     }
+    */
 }

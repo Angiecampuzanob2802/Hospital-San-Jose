@@ -1,4 +1,3 @@
-Diabetes;Cronica;Medicamentos:Empaglifozina,Dapaglifozina,Metformina,Insulina Glarina
-Hipertensión Arterial;Aguda;Medicamentos:Hidroclorotiazida,Losartan,Metoprolol Succinato,Sacubitrilo +Valsartan
-Colesterol;Bajo;Medicamentos:Atorvastatina,Rosuvastatina,Colestiramina
-
+Diabetes;Cronica;Empaglifozina,Dapaglifozina,Metformina,Insulina Glarina
+Hipertensión Arterial;Aguda;Hidroclorotiazida,Losartan,Metoprolol Succinato,Sacubitrilo +Valsartan
+Colesterol;Bajo;Atorvastatina,Rosuvastatina,Colestiramina

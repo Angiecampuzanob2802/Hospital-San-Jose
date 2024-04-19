@@ -6,7 +6,7 @@ package autonoma.hospitalsanjose.models;
 /**
  * La clase Coordenada representa una ubicación geográfica mediante latitud y longitud.
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
- * @version 0.1.6
+ * @version 1.0.0
  * @since 2024-04-08
  */
 public class Coordenada {

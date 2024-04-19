@@ -3,8 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package autonoma.hospitalsanjose.models;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Scanner;
 
 /**
  *
@@ -12,7 +14,7 @@ import java.util.Date;
  * presupuesto, fecha de fundación, estado, localización, nóminas realizadas y
  * meta de venta anual.
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
- * @version 0.1.6
+ * @version 1.0.0
  * @since 2024-04-08
  * 
  */
@@ -31,62 +33,85 @@ public class Hospital {
      */
     private String telefono;
     /**
+     * El logo del Hospital
+     */
+    private String logo;
+    /**
      * El presupuesto del Hospital
      */
     private double presupuesto;
     /**
      * La Fecha de fundación del Hospital
      */
-    private Date fechaFundacion;
+    private int fechaFundacion;
     /**
-     * El estado del Hospital
+     * El estado financiero del Hospital
      */
-    private boolean estado;
+    private String estado;
     /**
      * La localización del Hospital
      */
     private Coordenada localizacion;
     /**
-     * Las nominas realizadas por el Hospital
+     *Las nominas realizadas por el Hospital
+     *private ArrayList<Nomina>nominasRealizadas;
      */
-    private ArrayList<Nomina>nominasRealizadas;
     /**
-     * La meta de venta anual del Hospital
+     * El Gerente del Hospital
      */
-    private double metaVentaAnual;
     private Gerente gerente;
-    
+    /**
+     * El inventario de medicamentos del Hospital
+     */
+    private Inventario inventario;
+    /**
+     * Lista de empleados del hospital
+     */
+    private ArrayList<Empleado>empleados;
+    /**
+     * Lista de pacientes del hospital
+     */
+    private ArrayList<Paciente>pacientes;
+    /**
+     * El inicio de Sesión del hospital
+     */
     private Administrador administrador;
     /////constructor con parametros /////
     /**
      * El constructor de la clase Hospital
      * @param nombre El nombre del hospital.
-     * @param direccion La dirección del hospital.
+     * @param direccion La dirección del hospital
      * @param telefono El teléfono del hospital.
+     * @param logo El logo del hospital
      * @param presupuesto El presupuesto del hospital.
      * @param fechaFundacion La fecha de fundación del hospital.
-     * @param estado El estado del hospital.
-     * @param localizacion La localización del hospital.
-     * @param nominasRealizadas Las nóminas realizadas por el hospital.
-     * @param metaVentaAnual La meta de venta anual del hospital.
-     * @param gerente El gerente del Hospital
-     * 
+     * @param estado El estado financiero  del hospital.
+     * @param localizacion La localización del hospital
+     * @param gerente El gerente del hospital
+     * @param inventario El inventario del hospital
+     * @param empleados Los empleados del hospital
+     * @param pacientes Los pacientes del hospital
+     * @param administrador El inicio de sesión del hospital
      */
 
-    public Hospital(String nombre, String direccion, String telefono, double presupuesto, Date fechaFundacion, boolean estado, Coordenada localizacion,ArrayList<Nomina> nominasRealizadas, double metaVentaAnual,Gerente gerente) {
+    public Hospital(String nombre, String direccion, String telefono,String logo,double presupuesto, int fechaFundacion, String estado, Coordenada localizacion,Gerente gerente,Inventario inventario,ArrayList<Empleado>empleados,ArrayList<Paciente>pacientes,Administrador administrador) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
+        this.logo = logo;
         this.presupuesto = presupuesto;
         this.fechaFundacion = fechaFundacion;
         this.estado = estado;
         this.localizacion = localizacion;
-        this.nominasRealizadas = nominasRealizadas;
-        this.metaVentaAnual = metaVentaAnual;
-        this.gerente=gerente;
+        this.gerente = gerente;
+        this.inventario = inventario;
+        this.empleados = empleados;
+        this.pacientes = pacientes;
+        this.administrador = administrador;
+    }
+        public Hospital(){
     }
     ///// metodos de acceso////
-
     public String getNombre() {
         return nombre;
     }
@@ -118,19 +143,19 @@ public class Hospital {
         this.presupuesto = presupuesto;
     }
 
-    public Date getFechaFundacion() {
+    public int getFechaFundacion() {
         return fechaFundacion;
     }
 
-    public void setFechaFundacion(Date fechaFundacion) {
+    public void setFechaFundacion(int fechaFundacion) {
         this.fechaFundacion = fechaFundacion;
     }
 
-    public boolean isEstado() {
+    public String getEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
 
@@ -141,22 +166,6 @@ public class Hospital {
     public void setLocalizacion(Coordenada localizacion) {
         this.localizacion = localizacion;
     }
-    public ArrayList<Nomina> getNominasRealizadas() {
-        return nominasRealizadas;
-    }
-
-    public void setNominasRealizadas(ArrayList<Nomina> nominasRealizadas) {
-        this.nominasRealizadas = nominasRealizadas;
-    }
-
-    public double getMetaVentasAnual() {
-        return metaVentaAnual;
-    }
-
-    public void setMetaVentasAnual(double metaVentasAnual) {
-        this.metaVentaAnual = metaVentasAnual;
-    }
-
     public Gerente getGerente() {
         return gerente;
     }
@@ -172,44 +181,129 @@ public class Hospital {
     public void setAdministrador(Administrador administrador) {
         this.administrador = administrador;
     }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public Inventario getInventario() {
+        return inventario;
+    }
+
+    public void setInventario(Inventario inventario) {
+        this.inventario = inventario;
+    }
+
+    public ArrayList<Empleado> getEmpleados() {
+        return empleados;
+    }
+
+    public void setEmpleados(ArrayList<Empleado> empleados) {
+        this.empleados = empleados;
+    }
+
+    public ArrayList<Paciente> getPacientes() {
+        return pacientes;
+    }
+
+    public void setPacientes(ArrayList<Paciente> pacientes) {
+        this.pacientes = pacientes;
+    }
     
     //// metodos////
-    /**
-     * Realiza una nómina para el hospital, actualizando el presupuesto y el estado del hospital.
-     * @param nomina La nómina a realizar.
-     */
-    public void realizarNomina(Nomina nomina) {
-        nominasRealizadas.add(nomina);
-        // Actualizar presupuesto y estado del hospital
-        double totalNomina = calcularTotalNomina();
-        presupuesto -= totalNomina;
-        if (presupuesto < 0) {
-            estado = false; // Cambiar a estado de quiebra
-        }
+    public void registrarPatrocinio(){
+        
     }
-    /**
-     * Calcula el total de la nómina realizada por el hospital.
-     * @return El total de la nómina.
-     */
-    private double calcularTotalNomina() {
-        double total = 0;
-        for (Nomina nomina : nominasRealizadas) {
-            total += nomina.getSalarioTotal();
+    
+    public static Hospital crearGerenteDesdeArchivo(){
+        File fichero = new File("C:\\Users\\dioge\\OneDrive\\Documentos\\NetBeansProjects\\HospitalSanJose\\src\\autonoma\\hospitalsanjose\\archivos\\Medicamentos.txt");
+        Scanner scanner = null;
+        Hospital hospitalNuevo= new Hospital();
+        
+        try {
+            scanner = new Scanner(fichero);
+            while (scanner.hasNextLine()){
+                String linea = scanner.nextLine();
+                String[] partes = linea.split(":");
+                
+                if (partes.length >= 2){
+                    String clave = partes[0];
+                    String valor = linea.substring(clave.length() + 1);
+
+                    switch (clave){
+                        case "Nombre":
+                            hospitalNuevo.setNombre(valor);
+                            System.out.println("Entré");
+                            break;
+                        case "Direccion":
+                            hospitalNuevo.setDireccion(valor);
+                            break;
+                        case "Telefono":
+                            hospitalNuevo.setTelefono(valor);
+                            break;
+                        case "Logo":
+                            hospitalNuevo.setLogo(valor);
+                            break;
+                        case "Presupuesto":
+                            hospitalNuevo.setPresupuesto(0);
+                            break;
+                        case "Fecha de fundacion":
+                            hospitalNuevo.setFechaFundacion(0);
+                            break;
+                        case "Estado":
+                            hospitalNuevo.setEstado(valor);
+                            break;
+                        case "Localizacion":
+                            String[] coordenadas = valor.split(";");
+                            double latitud = Double.parseDouble(coordenadas[0]);
+                            double longitud = Double.parseDouble(coordenadas[1]);
+                            hospitalNuevo.getLocalizacion().setLatitud(latitud);
+                            break;
+                        case "Nombre gerente":
+                            hospitalNuevo.gerente.getNombre();
+                            break;
+                        case "Numero de documento gerente":
+                            hospitalNuevo.gerente.getNumeroIdentificacion();
+                            break;
+                        case "Edad gerente":
+                            hospitalNuevo.gerente.getEdad();
+                            break;
+                        case "Carrera gerente":
+                            hospitalNuevo.gerente.getCarrera();
+                            break;
+                        default:
+                            // Ignorar líneas que no corresponden a datos del hospital
+                            break;
+                    }
+                }
+            }
+            //System.out.println("Soy el archivo");
+            //System.out.println("nombre" + hospitalNuevo.getNombre());
+            //System.out.println("nombre gerente" + hospitalNuevo.getGerente().getNombreGerente() + hospitalNuevo.getLocalizacion().getLatitud() + " " + hospitalNuevo.getLocalizacion().getLongitud());
+            return hospitalNuevo;  
+        } catch (FileNotFoundException ex) {
+                System.out.println("Mensaje: " + ex.getMessage());
+        } finally {
+            try {
+                if (scanner != null)
+                    scanner.close();
+            } catch (Exception ex2) {
+                System.out.println("Mensaje 2: " + ex2.getMessage());
+            }
         }
-        return total;
+        return null;
     }
-    /**
-     * Registra un patrocinio para el hospital, actualizando el presupuesto y el estado del hospital.
-     * @param monto El monto del patrocinio a registrar.
-     */
-    public void registrarPatrocinio(double monto) {
-        presupuesto += monto;
-        if (presupuesto >= 0) {
-            estado = true; // Cambiar a estado activo
-        }
+    
+      public double calcularPresupuestoRestante(){
+        return presupuesto;
     }
-    /*
-    gestionar ventaMedicamento desde el hospital
-    */
+    
+    public boolean cambiarEstadoFinanciero(boolean estado){
+        return false;
+    }
 
 }

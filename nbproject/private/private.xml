@@ -12,6 +12,7 @@
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma.hospitalsanjose.images/favicon.png</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Reporte.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Inventario.java</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma.hospitalsanjose.images/logo2.png</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Coordenada.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/archivos/Empleados.txt</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/MedicamentoGenerico.java</file>
@@ -25,6 +26,7 @@
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Cita.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma.hospitalsanjose.images/logo.png</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma.hospitalsanjose.images/city.png</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/views/VentanaPrincipalHospital.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/archivos/Enfermedades.txt</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/archivos/Info.txt</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/views/ModuloPacientes.java</file>
@@ -32,6 +34,7 @@
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Nomina.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/views/ModuloReportes.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Hospital.java</file>
+            <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/models/Administrador.java</file>
             <file>file:/C:/Users/dioge/OneDrive/Documentos/NetBeansProjects/HospitalSanJose/src/autonoma/hospitalsanjose/views/InicioHospital.java</file>
         </group>
     </open-files>

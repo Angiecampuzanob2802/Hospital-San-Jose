@@ -9,7 +9,7 @@ package autonoma.hospitalsanjose.models;
  * La clase EmpleadoDelAreaDeLaSalud representa a un empleado del área de la salud en el sistema del hospital.
  * Extiende la clase abstracta Empleado e incluye atributos y métodos específicos para empleados del área de la salud.
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
- * @version 0.1.6
+ * @version 1.0.0
  * @since 2024-04-08
  */
 public class EmpleadoDelAreaDeLaSalud extends Empleado{
@@ -27,18 +27,20 @@ public class EmpleadoDelAreaDeLaSalud extends Empleado{
     /**
      * 
      * Constructor de la clase EmpleadoDelAreaDeLaSalud.
-     * 
      * @param especialidad La especialidad del empleado del área de la salud.
      * @param horasTrabajadas El número de horas trabajadas por el empleado del área de la salud.
      * @param nombre  El nombre del empleado.
      * @param identificacion La identificación del empleado
      * @param edad La edad del empleado.    
      * @param salarioBase El salario base del empleado.
+     * @param hospital El hospital donde trabajan los empleados
+     * @param salarioTotal El salario total de los empleados
      */
-    public EmpleadoDelAreaDeLaSalud(String especialidad, double horasTrabajadas, String nombre, String identificacion, int edad, double salarioBase) {
-        super(nombre, identificacion, edad, salarioBase);
+    public EmpleadoDelAreaDeLaSalud(String especialidad, double horasTrabajadas, String nombre, String identificacion, int edad, double salarioBase,Hospital hospital,double salarioTotal) {
+        super(nombre, identificacion, edad, salarioBase,hospital,salarioTotal);
         this.especialidad = especialidad;
         this.horasTrabajadas = horasTrabajadas;
+        calcularSalarioTotal();
     }
      //// metodos de acceso
     public String getEspecialidad() {
@@ -53,21 +55,11 @@ public class EmpleadoDelAreaDeLaSalud extends Empleado{
     public void setHorasTrabajadas(Double horasTrabajadas) {
         this.horasTrabajadas = horasTrabajadas;
     }
-    ////// metodos 
-    /**
-     * 
-     * Calcula el salario del empleado del área de la salud.
-     * El salario se calcula como el 1.2% del salario base multiplicado por el número de horas trabajadas.
-     * @return El salario del empleado del área de la salud.
-     */
-    /*
+    ////// metodo abstracto
     @Override
-    public double calcularSalario(){
-        return getSalarioBase()*0.012*horasTrabajadas;
+    public void calcularSalarioTotal(){
+        double base = salarioBase * 0.012;
+        double valorHoras = base * getHorasTrabajadas();
+        salarioTotal = salarioBase + valorHoras;
     }
-    */
-    /*
-    empleado salud
-    calcularSalario:1.2% y se multiplica por el numero de horas trabajadas y luego sumarlos
-    */
 }
