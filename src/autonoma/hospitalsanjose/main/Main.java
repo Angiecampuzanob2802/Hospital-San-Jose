@@ -8,7 +8,7 @@ import autonoma.hospitalsanjose.models.Coordenada;
 import autonoma.hospitalsanjose.models.Gerente;
 import autonoma.hospitalsanjose.models.Hospital;
 import autonoma.hospitalsanjose.views.InicioHospital;
-import autonoma.hospitalsanjose.views.VentanaPrincipalHospital;
+import autonoma.hospitalsanjose.views.VentanaPrincipal;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -26,7 +26,7 @@ public class Main {
         Administrador administrador = new Administrador("Aarong", "12345678", "Aaron Glassman", "84.941.564", 69, "Neurocirujano");
         hospital.setAdministrador(administrador);
         
-        VentanaPrincipalHospital ventana = new VentanaPrincipalHospital(hospital);
+        VentanaPrincipal ventana = new VentanaPrincipal(hospital);
         InicioHospital login = new InicioHospital(ventana, true, hospital, ventana);
         login.setVisible(true);
     }

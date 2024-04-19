@@ -39,6 +39,11 @@ public abstract class Empleado {
      * @param edad La edad del empleado
      * @param salarioBase El salario base del empleado
      */
+    
+    public Empleado(){
+        
+    }
+    
     public Empleado(String nombre, String identificacion, int edad, double salarioBase) {
         this.nombre = nombre;
         this.identificacion = identificacion;
