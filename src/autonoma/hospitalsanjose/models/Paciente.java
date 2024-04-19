@@ -128,7 +128,7 @@ public class Paciente {
     }
     ///// metodos 
     public static ArrayList<Paciente> crearPacienteDesdeArchivo(ArrayList<Enfermedad>enfermedades) throws FileNotFoundException {
-        File fichero = new File("C:\\Users\\dioge\\OneDrive\\Documentos\\NetBeansProjects\\HospitalSanJose\\src\\autonoma\\hospitalsanjose\\archivos\\Paciente.txt");
+        File fichero = new File("C:\\Users\\dioge\\OneDrive\\Documentos\\NetBeansProjects\\HospitalSanJose\\src\\autonoma\\hospitalsanjose\\archivos\\Pacientes.txt");
         Scanner scanner = null;
         ArrayList<Paciente> pacientes = new ArrayList<>();
         ArrayList<Enfermedad> enfermedadesLeidas= new ArrayList<>();
@@ -145,7 +145,7 @@ public class Paciente {
                 pacienteNuevo.setTelefono(partes[2]);
                 pacienteNuevo.setEdad(Integer.parseInt(partes[3]));
                 pacienteNuevo.setCorreoElectronico(partes[4]);
-                String[] enfermedadesStr = partes[5].split(": ")[1].split(","); // Obtener los nombres de los padecimientos
+                String[] enfermedadesStr = partes[5].split(" , "); // Obtener los nombres de los padecimientos
 
                 for (String enfermedadStr : enfermedadesStr){
                     Enfermedad e = Enfermedad.buscarEnfermedad(enfermedades,enfermedadStr.trim());

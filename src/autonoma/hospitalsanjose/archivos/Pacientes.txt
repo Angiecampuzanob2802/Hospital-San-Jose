@@ -1,10 +1,10 @@
-Elizabeth Betancur;25104508;3128460373;53;eliza_028@gmail.com;Patologías:Urticaria Idiopatica,Colesterol alto;Gastritis;0
-Aurelio Campuzano;15969366;3117944828;55;aureliogarcia@gmail.com;Patologías:Hipotiroidismo,Dermatitis plantal,Asma;0
-Valeria Gaviria;1058963475;3507896542;35;vale_gaviria09;Patologías:Psoriasis;Artritis Rematoidea;0
-Luis Eduardo Velez;1004589235;3220035697;40;luis.v@gmail.com;Patologías:Alopecia,Sindrome de Crohn;0
-Magdalena Vallejo;25005896321;301546872;70;magdalena02@gmail.com;Patologías:Diabetes tipo I;Insuficiencia Renal;0
-Edwin Perez;1006236598;3208923111;28;edwinP@gmail.com;Patologías:Insuficiencia Cardiaca,Hipertensión Arterial;0
-Ana Maria Forero;24562312;3108953787;60;foreroAna@gmail.com;Patologías:Cefalea Cronica,Migraña,Alzheimer;0
-Morelia Vasquez;30147258;311522336;75;morelia_1972@gmail.com;Patología:Esclerosis lateral amiotrófica;0
-Hugo Silva;50236987;300885221;45;silva822@gmail.com;Patologías:C.A Prostata;Infeccion Uriinaria;0
-Jair Ballesteros;1001789256;321489521;20;jairB_05@gmail.com;Patología:Neumonia;0
+Elizabeth Betancur;25104508;3128460373;53;eliza_028@gmail.com;Urticaria Idiopatica,Colesterol alto;Gastritis;0
+Aurelio Campuzano;15969366;3117944828;55;aureliogarcia@gmail.com;Hipotiroidismo,Dermatitis plantal,Asma;0
+Valeria Gaviria;1058963475;3507896542;35;vale_gaviria09;Psoriasis;Artritis Rematoidea;0
+Luis Eduardo Velez;1004589235;3220035697;40;luis.v@gmail.com;Alopecia,Sindrome de Crohn;0
+Magdalena Vallejo;25005896321;301546872;70;magdalena02@gmail.com;Diabetes tipo I;Insuficiencia Renal;0
+Edwin Perez;1006236598;3208923111;28;edwinP@gmail.com;Insuficiencia Cardiaca,Hipertensión Arterial;0
+Ana Maria Forero;24562312;3108953787;60;foreroAna@gmail.com;Cefalea Cronica,Migraña,Alzheimer;0
+Morelia Vasquez;30147258;311522336;75;morelia_1972@gmail.com;Esclerosis lateral amiotrófica;0
+Hugo Silva;50236987;300885221;45;silva822@gmail.com;C.A Prostata;Infeccion Urinaria;0
+Jair Ballesteros;1001789256;321489521;20;jairB_05@gmail.com;Neumonia;0

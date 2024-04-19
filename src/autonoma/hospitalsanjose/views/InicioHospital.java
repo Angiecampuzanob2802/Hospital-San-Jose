@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 /**
  *
  * @author Angie Campuzano Betancur & Brayan Estivel Díaz
- * @versión 0.1.6
+ * @versión 1.0.0
  * @since 2024-04-08
  */
 public class InicioHospital extends javax.swing.JFrame {

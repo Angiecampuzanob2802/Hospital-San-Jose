@@ -20,15 +20,19 @@ public class ModuloEmpleados extends javax.swing.JDialog {
     private VentanaPrincipal ventanaPrincipal;
     /**
      * Creates new form ModuloEmpleado
+     * @param parent
+     * @param modal
+     * @param hospital
+     * @param ventanaPrincipal
      */
-    public ModuloEmpleados(java.awt.Frame parent, boolean modal, Hospital hospital, VentanaPrincipal ventana) {
+    public ModuloEmpleados(java.awt.Frame parent, boolean modal, Hospital hospital, VentanaPrincipal ventanaPrincipal) {
         super(parent, modal);
         initComponents();
         
         this.setLocationRelativeTo(null);
         
         this.hospital = hospital;
-        this.ventanaPrincipal = ventana;
+        this.ventanaPrincipal = ventanaPrincipal;
     }
 
     /**
@@ -72,7 +76,6 @@ public class ModuloEmpleados extends javax.swing.JDialog {
         jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, 290, 140));
 
         logoname.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        logoname.setForeground(new java.awt.Color(0, 0, 0));
         logoname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logoname.setText("NOMBRE EMPRESA");
         jPanel1.add(logoname, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 250, 290, 20));

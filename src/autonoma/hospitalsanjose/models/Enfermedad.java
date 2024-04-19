@@ -96,7 +96,7 @@ public class Enfermedad {
                 
                 enfermedadNuevo.setNombre(partes[0]);
                 enfermedadNuevo.setDescripcion(partes[1]);
-                String[] medicamentosStr = partes[2].split(",");// Obtener los nombres de los medicamentos
+                String[] medicamentosStr = partes[2].split(","); // Obtener los nombres de los medicamentos
                 System.out.println(medicamentosStr[1]);
                 
                 for (String medicamentoStr : medicamentosStr){
